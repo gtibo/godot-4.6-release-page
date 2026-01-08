@@ -31,10 +31,9 @@
     function updateViewportSize(){
         let w = container.clientWidth * window.devicePixelRatio,
             h = container.clientHeight * window.devicePixelRatio;
-
         camera.aspect = w / h;
-        camera.updateProjectionMatrix();
         renderer.setSize(w, h, false);
+        camera.updateProjectionMatrix();
     }
 
     const ambientLight = new THREE.AmbientLight(0xFFFFFF, 1.6);
@@ -71,25 +70,8 @@
 
     const loader = new GLTFLoader();
 
-    let sphere = new THREE.MeshStandardMaterial();
     let material = new THREE.MeshStandardMaterial();
     material.roughness = 0.5;
-    sphere.roughness = 0.5;
-
-
-    new THREE.TextureLoader().load("/assets/models/godot_plush_albedo.png", function(texture){
-        texture.channel = 0;
-        texture.flipY = false;
-        material.map = texture;
-        material.needsUpdate = true;
-    });
-
-    new THREE.TextureLoader().load("/assets/models/godot_plush_normal.png", function(texture){
-        texture.channel = 0;
-        texture.flipY = false;
-        material.normalMap = texture;
-        material.needsUpdate = true;
-    });
 
 
     loader.load( '/assets/models/banner_test.glb', function ( gltf ) {

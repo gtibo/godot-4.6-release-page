@@ -135,19 +135,7 @@ body {
       fill: var(--accent-color);
     }
   }
-  &.reverse{
-    flex-direction: column-reverse;
-  }
-  &.large{
-    .body{
-      columns: 2;
-    }
-  }
   &.medium{
-    flex-direction: row;
-      &.reverse{
-        flex-direction: row-reverse;
-      }
     .media-block{
       flex:1;
     }
@@ -199,7 +187,6 @@ body {
 }
 
 .hero{
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -248,13 +235,39 @@ body {
   flex-direction: column;
   gap: var(--l);
   margin-bottom: 4em;
+  .sub-grid{
+    display: flex;
+    flex-direction: column;
+    gap: var(--m);
+  }
 }
 
 @media (min-width: 620px) {
   .hero{
-  
     .title{font-size: 2.4em;}
     .subtitle{font-size: 1.0em;}
     .btn-xl{font-size: 1.2em;}
+  }
+
+  .section-body{
+    .sub-grid{
+      flex-direction: row;
+    }
+  }
+  .card{
+    &.large{
+      .body{
+        columns: 2;
+      }
+    }
+    &.reverse{
+      flex-direction: column-reverse;
+    }
+    &.medium{
+      flex-direction: row;
+        &.reverse{
+          flex-direction: row-reverse;
+        }
+    }
   }
 }
