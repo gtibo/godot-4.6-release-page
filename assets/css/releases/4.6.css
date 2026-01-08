@@ -18,7 +18,7 @@
 
 @font-face {
     font-family: "SplineSans";
-    src: url("/assets/fonts/SplineSans-VariableFont_wght.ttf");
+    src: url("{{ site.baseurl }}/assets/fonts/SplineSans-VariableFont_wght.ttf");
     font-weight: 100 1000;
     font-display: swap;
 }
