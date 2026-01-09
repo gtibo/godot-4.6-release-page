@@ -17,6 +17,26 @@
     renderer.toneMappingExposure = 1.5;
 
 
+    const options = {
+        rootMargin: "0px",
+        scrollMargin: "0px",
+        threshold: 0.0,
+    };
+
+    const observerCallback = function(entries, observer){
+        entries.forEach((entry)=>{
+            if(entry.target != container) return;
+            if(entry.isIntersecting){
+                play();
+            }else{
+                stop();
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, options);
+    observer.observe(container);
+    
     document.body.addEventListener("pointermove", function(e){
         mouse.x = e.clientX / container.clientWidth;
         mouse.y = e.clientY / container.clientHeight;
@@ -56,23 +76,25 @@
     let mixer;
     let clock = new THREE.Clock();
 
-    function animate() {
+    function animate() {        
         const dt = clock.getDelta();
-
+        if ( mixer ) mixer.update( dt );
         if (camera){
             camera.position.x = (mouse.x - 0.5) * 0.5;
             camera.position.y = -(mouse.y - 0.5) * 0.25 -scrollPercent;
+            renderer.render( scene, camera );
         }
-
-        if ( mixer ) mixer.update( dt );
-        if (camera) renderer.render( scene, camera );
     }
-    renderer.setAnimationLoop( animate );
+
+    function play(){
+        renderer.setAnimationLoop(animate);
+    }
+
+    function stop(){
+        renderer.setAnimationLoop(null);
+    }
 
     const loader = new GLTFLoader();
-
-    let material = new THREE.MeshStandardMaterial();
-    material.roughness = 0.5;
 
 
     loader.load('{{ site.baseurl }}/assets/models/banner_test.glb', function ( gltf ) {
@@ -80,9 +102,6 @@
         GLBScene.position.x = 2.0;
         
         GLBScene.traverse(function(child) {
-            if(child.name.includes("GodotPlushMesh")){
-                // child.material = material;
-            }
             if(child.name == "Camera"){
                 camera = child;
                 updateViewportSize();
@@ -99,6 +118,8 @@
     }, undefined, function ( error ) {
         console.error( error );
     } );
+
+    play();
 
 </script>
 
