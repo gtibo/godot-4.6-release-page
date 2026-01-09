@@ -211,38 +211,46 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   width: 100%;
   height: auto;
+  min-height: 80vh;
   .content{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-left: 1.2em;
     margin-right: 1.2em;
-    margin-top: var(--xxl);
-    margin-bottom: var(--xxl);
   }
-  .title{
+  h1{
+    font-size: 1.2em;
+    margin-bottom: var(--s);
+  }
+  h2{
     font-size: 1.4em;
-    margin-top: var(--xl);
     margin-bottom: var(--l);
     font-weight: 600;
     text-align: center;
   }
-  .subtitle{
-    background-color: rgba(0, 0, 0, 0.4);
-    font-size: 0.9em;
-    margin-bottom: var(--l);
-    max-width: 60ch;
-    padding: 0.4em 0.8em;
-    border-radius: 0.8em;
-  }
   .btn-xl{font-size: 0.8em;}
 }
 
+.preamble{
+  margin-top: 4em;
+  margin-bottom: 6em;
+  font-size: 1.4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  p{
+    max-width: 70ch;
+  }
+}
+
 .section-header{
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -250,8 +258,17 @@ body {
   margin-bottom: var(--xl);
   width: 100%;
   .title{
+    position: relative;
     font-size: 1.6em;
     padding: var(--xl) 0em;
+  }
+  img{
+    position: absolute;
+    top: 80%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    height: 150%;
+    width: auto;
   }
 }
 
@@ -310,8 +327,8 @@ body {
 
 @media (min-width: 620px) {
   .hero{
-    .title{font-size: 2.4em;}
-    .subtitle{font-size: 1.0em;}
+    h1{font-size: 2.0em; text-transform: uppercase;}
+    h2{font-size: 2.6em;}
     .btn-xl{font-size: 1.2em;}
   }
 
