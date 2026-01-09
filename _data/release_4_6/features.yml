@@ -15,7 +15,7 @@ new_theme:
   media_author:
     name: MediaAuthor
     link: https://github.com/passivestar
-  image: placeholder.png
+  media: placeholder.png
 
 jolt_default:
   title: We put a bolt on Jolt
@@ -34,7 +34,7 @@ jolt_default:
   media_author:
     name: MediaAuthor
     link: https://github.com/passivestar
-  image: placeholder.png
+  media: placeholder.png
 
 new_ik:
   title: Brand new IK framework
@@ -55,7 +55,7 @@ new_ik:
   media_author:
     name: MediaAuthor
     link: https://github.com/passivestar
-  image: placeholder.png
+  media: placeholder.png
 
 dock_system:
   title: Dock your heart out
@@ -74,7 +74,7 @@ dock_system:
   media_author:
     name: MediaAuthor
     link: https://github.com/passivestar
-  image: placeholder.png
+  media: placeholder.png
 
 new_ssr:
   title: Major SSR Overhaul
@@ -91,4 +91,4 @@ new_ssr:
   media_author:
     name: MediaAuthor
     link: https://github.com/passivestar
-  image: placeholder.png
+  media: placeholder.webm

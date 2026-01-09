@@ -47,5 +47,36 @@ title: Godot 4.6
         </section>
 
     </main>
+    <script>
+        let mediaBlocks = document.querySelectorAll(".media-block");
+
+        mediaBlocks.forEach((mediaBlock) => {
+            // Check if mediablock contains a video element
+            let player = mediaBlock.querySelector("video");
+            if(player == null) return;
+            let playIcon = mediaBlock.querySelector("[name='play']");
+            let pauseIcon = mediaBlock.querySelector("[name='pause']");
+
+            player.addEventListener("click", function(e){
+                if(player.paused){
+                    player.play();
+                }else{
+                    player.pause();
+                }
+            });
+
+            player.addEventListener("play", function(e){
+                playIcon.classList.add("hidden");
+                pauseIcon.classList.remove("hidden");
+            });
+
+            player.addEventListener("pause", function(e){
+                playIcon.classList.remove("hidden");
+                pauseIcon.classList.add("hidden");
+            });
+
+        });
+
+    </script>
 </body>
 </html>

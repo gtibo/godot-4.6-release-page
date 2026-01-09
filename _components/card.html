@@ -1,7 +1,7 @@
 {% assign item = site.data['release_4_6'].features[include.name] %}
 
 <div class="card {{include.size}} {{include.order}}">
-    {%if item.image %}
+    {%if item.media %}
         {% include_relative _components/media.html item=item %}
     {% endif %}
     <div class="content">
