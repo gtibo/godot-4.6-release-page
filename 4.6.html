@@ -30,9 +30,7 @@ title: Godot 4.6
     </section>
 
     <div class="preamble">
-        <p>
-            Look forward to plenty of quality of life improvements hidden within this release. Faster load speeds, reduced stutter, streamlined processes — spotting all the optimizations that have been applied in the background will take some time. On top of that, long-awaited comfort features like embedded game windows and interactive in-game editing will feel more in line with other software on the market, making transitioning between them an even smoother experience. The editor overhaul alone takes up a big chunk of this release, after all.
-        </p>
+        {{site.data.release_4_6.general.introduction.text | markdownify}}
     </div>
 
     <section id="section-highlights" class="section-header">
@@ -61,6 +59,7 @@ title: Godot 4.6
             </div>
             {% include_relative _components/card.html name="new_ik" size="large"%}
             {% include_relative _components/card.html name="new_ssr" size="medium"%}
+            {% include_relative _components/card.html name="highlights_conclusion" size="medium" order="reverse" %}
         </section>
 
         <section id="section-general" class="section-header">
@@ -90,19 +89,19 @@ title: Godot 4.6
         </section>
 
         <section id="section-epilogue" class="section-header">
-            <h3 class="title">{{ site.data.release_4_6.epilogue.conclusion.title}}</h3>
-            {{ site.data.release_4_6.epilogue.conclusion.text | markdownify}}
+            <h3 class="title">{{ site.data.release_4_6.general.conclusion.title}}</h3>
+            {{ site.data.release_4_6.general.conclusion.text | markdownify}}
         </section>
 
         <section class="section-body">
             <div class="contributors-wall">
-                {% for contributor in site.data.release_4_6.epilogue.contributors %}
+                {% for contributor in site.data.release_4_6.general.contributors %}
                     <a href={{ contributor.link }}>{{ contributor.name }}</a>
                 {% endfor %}
             </div>
 
 
-            {% assign end_message = site.data.release_4_6.epilogue.end_message %}
+            {% assign end_message = site.data.release_4_6.general.end_message %}
             <div class="quote">
                 <div class="text">
                     {{ end_message.text | markdownify}}

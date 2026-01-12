@@ -129,8 +129,14 @@ body {
   }
   .title{
     font-size: 1.6em;
+    margin-bottom: var(--xss);
+    font-weight: 700;
+  }
+  .subtitle{
+    font-size: 1.2em;
     margin-bottom: var(--s);
     font-weight: 600;
+    opacity: 70%;
   }
   .body{
     font-size: 1.2em;
@@ -138,6 +144,15 @@ body {
     opacity: 80%;
     p{
       margin-bottom: var(--s);
+    }
+    a{
+      color: var(--main-text-color);
+      text-decoration: none;
+      font-weight: 600;
+      &:hover{
+        border-color: var(--main-text-color);
+        border-bottom: solid;
+      }
     }
   }
   .link-icon{

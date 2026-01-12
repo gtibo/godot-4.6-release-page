@@ -1,3 +1,9 @@
+introduction:
+  text: |
+    With the stability gained over the past five releases, the engine has matured enough to enter a new development phase. Godot 4.6 kicks off a period of polish, quality-of-life improvements, tighter integration of industry-standards, and doubled-down effort on performance optimization.
+
+    The result: a release that puts you and your workflow first. The new editor theme lets your projects take center stage, while dozens of improvements across the board reduce friction and speed up everyday development. Every aspect, from loading assets to editing, debugging, exporting, and testing, has received some love to keep you focused on creating and minimize the time you spend wrestling with UI, or fiddling with external tools and plugins.
+
 conclusion:
   title: Team work makes the dream work
   text: |
