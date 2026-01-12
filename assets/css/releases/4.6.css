@@ -34,6 +34,7 @@ body {
   min-height: 100%;
   color: var(--main-text-color);
   background-color: var(--main-bg-color);
+  font-size: 0.8em;
 }
 
 .btn{
@@ -254,7 +255,7 @@ body {
 .preamble{
   margin-top: 4em;
   margin-bottom: 6em;
-  font-size: 1.4em;
+  padding: 0 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -271,7 +272,7 @@ body {
   align-items: center;
   background-color: var(--card-bg-color);
   margin-bottom: var(--xl);
-  padding: var(--xxl) 0em;
+  padding: var(--xxl) 2em;
   width: 100%;
   .title{
     position: relative;
@@ -396,12 +397,17 @@ body {
 }
 
 @media (min-width: 620px) {
+  body{
+    font-size: 1.0em;
+  }
   .hero{
     h1{font-size: 2.0em; text-transform: uppercase;}
     h2{font-size: 2.6em;}
     .btn-xl{font-size: 1.2em;}
   }
-
+  .preamble{
+    font-size: 1.4em;
+  }
   .section-body{
     .sub-grid{
       flex-direction: row;
