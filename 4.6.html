@@ -42,11 +42,9 @@ title: Godot 4.6
             <ul>
                 <li><a href="#section-highlights">Highlights</a></li>
                 <li><a href="#section-general">General</a></li>
-                <li><a href="#section-2d">2D</a></li>
-                <li><a href="#section-3d">3D</a></li>
-                <li><a href="#section-editor">Editor</a></li>
                 <li><a href="#section-system">System</a></li>
-                <li><a href="#section-xr">XR</a></li>
+                <li><a href="#section-platforms">Platforms</a></li>
+                <li><a href="#section-scripting">Scripting</a></li>
                 <li><a href="#section-epilogue">Epilogue</a></li>
             </ul>
         </div>
@@ -66,26 +64,56 @@ title: Godot 4.6
             <h3 class="title">General</h3>
         </section>
 
-        <section id="section-2d" class="section-header">
-            <h3 class="title">2D</h3>
-        </section>
+        <section class="section-body">
+            {% include_relative _components/card.html name="unique_node_ids" size="medium"%}
+            <div class="sub-grid">
+                {% include_relative _components/card.html name="libgodot" order="reverse"%}
+                {% include_relative _components/card.html name="private_signals"%}
+            </div>
 
-        <section id="section-3d" class="section-header">
-            <h3 class="title">3D</h3>
-        </section>
+            <h4 style="margin-top: 1.6em; margin-bottom: 1em; font-size: 1.2em; font-weight: 600; opacity: 60%; align-self: center;">2D</h4>
+            
+            {% include_relative _components/card.html name="rotate_2d_tile" size="medium"%}
 
-        <section id="section-editor" class="section-header">
-            <h3 class="title">Editor</h3>
-        </section>
+            <h4 style="margin-top: 1.6em; margin-bottom: 1em; font-size: 1.2em; font-weight: 600; opacity: 60%; align-self: center;">3D</h4>
 
+            {% include_relative _components/card.html name="rotate_3d_tile" size="medium"%}
+            <div class="sub-grid">
+                {% include_relative _components/card.html name="bresenham_gridmap" order="reverse"%}
+                {% include_relative _components/card.html name="rotation_gizmo"%}
+            </div>
+
+            <h4 style="margin-top: 1.6em; margin-bottom: 1em; font-size: 1.2em; font-weight: 600; opacity: 60%; align-self: center;">GUI</h4>
+
+            {% include_relative _components/card.html name="separated_mouse_and_keyboard_focus" size="medium"%}
+            <div class="sub-grid">
+                {% include_relative _components/card.html name="pivot" order="reverse"%}
+                {% include_relative _components/card.html name="ui_margin"%}
+            </div>
+
+            <h4 style="margin-top: 1.6em; margin-bottom: 1em; font-size: 1.2em; font-weight: 600; opacity: 60%; align-self: center;">Editor</h4>
+
+            {% include_relative _components/card.html name="editor_enhancements" size="large"%}
+
+            {% include_relative _components/card.html name="hover_tabbar" size="medium" %}
+            <div class="sub-grid">
+                {% include_relative _components/card.html name="error_click" order="reverse"%}
+                {% include_relative _components/card.html name="objectdb_snapshots"%}
+            </div>
+            {% include_relative _components/card.html name="resource_preview" size="medium" order="reverse"%}
+
+        </section>
 
         <section id="section-system" class="section-header">
             <h3 class="title">System</h3>
         </section>
 
+        <section id="section-platforms" class="section-header">
+            <h3 class="title">Platforms</h3>
+        </section>
 
-        <section id="section-editor" class="section-header">
-            <h3 class="title">XR</h3>
+        <section id="section-scripting" class="section-header">
+            <h3 class="title">Scripting</h3>
         </section>
 
         <section id="section-epilogue" class="section-header">

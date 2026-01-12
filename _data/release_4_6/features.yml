@@ -113,6 +113,8 @@ highlights_conclusion:
       link: https://gdquest.com/
   media: placeholder.webm
 
+# General
+
 unique_node_ids:
   title: A node *will* remember...
   subtitle: Introducing unique node IDs
@@ -177,7 +179,7 @@ rotate_2d_tile:
 
 # 3D
 
-rotate_tile:
+rotate_3d_tile:
   title: I just wanna Select!
   subtitle: Decoupled Select and Transform modes
   text: |
@@ -223,7 +225,7 @@ rotation_gizmo:
 
 # GUI
 
-rotation_gizmo:
+separated_mouse_and_keyboard_focus:
   title: Click != Focus
   subtitle: Separated mouse and keyboard focus
   text: |
@@ -324,7 +326,6 @@ objectdb_snapshots:
     - name: Aleksander Lytinsky
       link: https://github.com/AleksLitynski
   media: placeholder.webm
-
 
 editor_enhancements:
   title: Editor Loot Drop!
