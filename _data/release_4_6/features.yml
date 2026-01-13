@@ -543,11 +543,13 @@ openxr_support:
   title: Hello OpenXR 1.1
   subtitle: Native OpenXR 1.1 Support
   text: |
-    The days of OpenXR 1.1 are upon us. Godot 4.6 will now automatically enable OpenXR 1.1 features on headsets and runtimes that support it. For you as a VR developer, this means native integration of modern XR functionality and better compatibility across devices, without needing to worry about mixing and matching plugins or runtime versions. The change also comes with a **compatibility layer** that keeps your existing OpenXR 1.0 projects working while letting you take advantage of the newer runtime where available, smoothing out deployment across a range of headsets and systems.
+    The days of OpenXR 1.1 are upon us. Godot 4.6 will now automatically enable OpenXR 1.1 features on headsets and runtimes that support it. While largely a maintenance release, OpenXR 1.1 guarantees support for previously optional features, most notably the **surface grip pose** for reliable virtual hand positioning when hand joint tracking isn't available. It also standardizes interaction profiles for VR controllers, letting you distinguish between specific controller models.
+
+    The change also comes with a **compatibility layer** that ensures as much feature parity as possible on devices where OpenXR 1.1 is not supported. Godot automatically falls back to OpenXR 1.0 and enables as many extensions as possible transparently, maximizing compatibility across devices.
 
   read_more: https://github.com/godotengine/godot/pull/109302
   contributors:
-    - name: Bastiaan Olij 
+    - name: Bastiaan Olij
       link: https://github.com/BastiaanOlij
   media: placeholder.webm
 
@@ -555,7 +557,7 @@ openxr_spatial_entities:
   title: One API to rule them all
   subtitle: Support for OpenXR spatial entities
   text: |
-    When you want to place objects on real-world surfaces, track persistent locations, or react to QR codes in AR or VR, you now get spatial anchors, surface detection, and marker tracking through the standardized OpenXR Spatial Entities extensions. Gone are the days of fiddling with vendor-specific SDKs or custom integrations that made your projects harder to maintain, harder to port, and harder to future-proof. You can now work with a single, consistent API and take advantage of broader runtime support as XR ecosystems evolve.
+    When you want to place objects on real-world surfaces, track persistent locations, or react to QR codes in AR or VR, you now get spatial anchors, surface detection, and marker tracking through the standardized OpenXR Spatial Entities extensions. This is the first phase of a broader effort to replace vendor-specific implementations with a single, consistent API for tracking and anchoring content in the real world. While some advanced features like furniture detection still require platform-specific solutions, spatial entities give you a solid foundation that will only grow as XR ecosystems evolve.
 
   read_more: https://github.com/godotengine/godot/pull/107391
   contributors:
