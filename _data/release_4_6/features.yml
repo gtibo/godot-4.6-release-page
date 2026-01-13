@@ -18,8 +18,8 @@ new_theme:
     link: https://github.com/YeldhamDev
   media_author:
     name: MediaAuthor
-    link: https://github.com/passivestar
-  media: placeholder.png
+    link: https://github.com/
+  media: new_theme.webp
 
 jolt_default:
   title: We put a bolt on Jolt
@@ -38,8 +38,9 @@ jolt_default:
     link: https://github.com/Calinou
   media_author:
     name: MediaAuthor
-    link: https://github.com/passivestar
-  media: placeholder.png
+    link: https://github.com/
+  media: jolt_preview.webm
+  poster: jolt_preview.webp
 
 new_ik:
   title: B-B-B-B Back to the bone
@@ -58,8 +59,9 @@ new_ik:
     link: https://github.com/TokageItLab
   media_author:
     name: MediaAuthor
-    link: https://github.com/passivestar
-  media: placeholder.png
+    link: https://github.com/
+  media: skeleton_modifier.webm
+  poster: skeleton_modifier.webp
 
 dock_system:
   title: Dock your heart out
@@ -78,8 +80,9 @@ dock_system:
     link: https://github.com/lodetrick
   media_author:
     name: MediaAuthor
-    link: https://github.com/passivestar
-  media: placeholder.png
+    link: https://github.com/
+  media: dock.webm
+  poster: dock.webp
 
 new_ssr:
   title: Reflections got real
@@ -98,7 +101,7 @@ new_ssr:
   media_author:
     name: MediaAuthor
     link: https://github.com/
-  media: placeholder.webm
+  media: placeholder.png
 
 highlights_conclusion:
   title: Ok, so what changes for you?

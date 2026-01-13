@@ -11,7 +11,7 @@
 
     {%if video_exts contains media_ext %}
         <video
-        poster="{{ site.baseurl }}/storage/releases/4.6/images/placeholder_video_poster.webp"
+        poster="{{ site.baseurl }}/storage/releases/4.6/images/{{item.poster}}"
         src="{{ site.baseurl }}/storage/releases/4.6/images/{{item.media}}" muted loop preload="none"></video>
         <div class="video-tag">
 
