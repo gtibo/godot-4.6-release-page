@@ -26,5 +26,7 @@
             VIDEO
         </div>
     {% endif %}
+    {%if item.media_author %}
     <a class="author" href={{include.item.media_author.link}}>@{{item.media_author.name}}</a>
+    {% endif %}
 </div>

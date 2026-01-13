@@ -37,8 +37,8 @@ jolt_default:
   - name: Calinou
     link: https://github.com/Calinou
   media_author:
-    name: MediaAuthor
-    link: https://github.com/
+    name: Tibo
+    link: https://gotibo.fr/
   media: jolt_preview.webm
   poster: jolt_preview.webp
 
@@ -58,8 +58,8 @@ new_ik:
   - name: Tokage
     link: https://github.com/TokageItLab
   media_author:
-    name: MediaAuthor
-    link: https://github.com/
+    name: Tibo
+    link: https://gotibo.fr/
   media: skeleton_modifier.webm
   poster: skeleton_modifier.webp
 
@@ -79,8 +79,8 @@ dock_system:
   - name: Lodetrick
     link: https://github.com/lodetrick
   media_author:
-    name: MediaAuthor
-    link: https://github.com/
+    name: Tibo
+    link: https://gotibo.fr/
   media: dock.webm
   poster: dock.webp
 
@@ -134,7 +134,6 @@ unique_node_ids:
   contributors:
     - name: Juan Linietsky
       link: https://github.com/reduz
-  media: placeholder.webm
 
 libgodot:
   title: Godot as a Library!
@@ -152,7 +151,6 @@ libgodot:
       link: https://github.com/konczg
     - name: Zorbathut
       link: https://github.com/zorbathut
-  media: placeholder.webm
 
 private_signals:
   title: Getting mixed signals
@@ -164,7 +162,7 @@ private_signals:
   contributors:
     - name: Tomasz Chabora
       link: https://github.com/KoBeWi
-  media: placeholder.webm
+  media: private_signal.webp
 
 # 2D
 
@@ -178,11 +176,15 @@ rotate_2d_tile:
   contributors:
     - name: Dexter
       link: https://github.com/DexterFstone
-  media: placeholder.webm
+  media_author:
+    name: Dexter
+    link: https://github.com/DexterFstone
+  media: turn_2d_tiles.webm
+  poster: turn_2d_tiles.webp
 
 # 3D
 
-rotate_3d_tile:
+new_select_mode:
   title: I just wanna Select!
   subtitle: Decoupled Select and Transform modes
   text: |
@@ -198,7 +200,11 @@ rotate_3d_tile:
   contributors:
     - name: Robert Yevdokimov
       link: https://github.com/ryevdokimov
-  media: placeholder.webm
+  media_author:
+    name: Robert Yevdokimov
+    link: https://github.com/ryevdokimov
+  media: select_mode.webm
+  poster: select_mode.webp
 
 bresenham_gridmap:
   title: Mind the Gap
@@ -212,7 +218,11 @@ bresenham_gridmap:
   contributors:
     - name: Martin Chlopecki
       link: https://github.com/mchlopecki
-  media: placeholder.webm
+  media_author:
+    name: Tibo
+    link: https://gotibo.fr/
+  media: grid_map_bresenham.webm
+  poster: grid_map_bresenham.webp
 
 rotation_gizmo:
   title: However you spin it...
@@ -224,7 +234,13 @@ rotation_gizmo:
   contributors:
     - name: Robert Yevdokimov
       link: https://github.com/ryevdokimov
-  media: placeholder.webm
+  media_author:
+    name: Tibo
+    link: https://gotibo.fr/
+  media: rotation_gizmo.webm
+  poster: rotation_gizmo.webp
+
+
 
 # GUI
 
@@ -260,13 +276,9 @@ ui_margin:
   title: Zero margin of error
   subtitle: Visual feedback for MarginContainer nodes
   text: |
-    Centering the pivot point of UI elements just got a whole lot easier!
-
-    So far, the pivot point of `Control` nodes defaulted to the top-left corner, meaning rotations and scaling happened relative to that corner. You could change this with the `pivot_offset` property, but it only accepted pixel values. So every time your control resized, you'd need code to recalculate and update the pivot position.
-
-    Godot 4.6 introduces `pivot_offset_ratio`, which lets you express the pivot point as a normalized 0 to 1 range relative to the control's size. Set it to `Vector2(0.5, 0.5)` to keep the pivot centered no matter what.
-
-  read_more: https://github.com/godotengine/godot/pull/70646
+    No more guessing with your UI spacing! When you select a `MarginContainer` node in the editor, you will now see its margins drawn directly in the viewport. This makes it crystal clear exactly how much space you're adding around child nodes, letting you fine-tune your layouts with confidence.
+  
+  read_more: https://github.com/godotengine/godot/pull/111095
   contributors:
     - name: Malcolm Anderson
       link: https://github.com/Meorge
