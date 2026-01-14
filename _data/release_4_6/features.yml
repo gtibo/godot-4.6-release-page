@@ -298,7 +298,11 @@ hover_tabbar:
   contributors:
     - name: Tomasz Chabora
       link: https://github.com/KoBeWi
-  media: placeholder.webm
+  media_author:
+    name: Tomasz Chabora
+    link: https://github.com/KoBeWi
+  media: hover_tabbar.webm
+  poster: hover_tabbar.webp
 
 resource_preview:
   title: Check it out now
@@ -386,7 +390,6 @@ editor_enhancements:
       link: https://github.com/DexterFstone
     - name: Fkeyz
       link: https://github.com/fkeyzuwu
-  media: placeholder.webm
 
 # System
 
