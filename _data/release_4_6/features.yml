@@ -467,7 +467,10 @@ controllers_led:
   contributors:
     - name: Nintorch
       link: https://github.com/Nintorch
-  media: placeholder.webm
+  media_author:
+    name: AHarmlessPotato
+    link: https://sketchfab.com/3d-models/playstation-5-dualsense-878c1f882808477ab81c2fe86d5a3936
+  media: controller_color.webp
 
 # Import
 
