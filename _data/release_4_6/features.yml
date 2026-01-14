@@ -254,7 +254,8 @@ separated_mouse_and_keyboard_focus:
   contributors:
     - name: Michael Alexsander
       link: https://github.com/YeldhamDev
-  media: placeholder.webm
+  media: new_focus.webm
+  poster: new_focus.webp
 
 pivot:
   title: Place a pivot
@@ -270,7 +271,8 @@ pivot:
   contributors:
     - name: Tomasz Chabora
       link: https://github.com/KoBeWi
-  media: placeholder.webm
+  media: control_pivot.webm
+  poster: control_pivot.webp
 
 ui_margin:
   title: Zero margin of error
