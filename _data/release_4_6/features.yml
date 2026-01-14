@@ -413,7 +413,11 @@ animation_editor_goodies:
       link: https://github.com/Arnklit
     - name: Michael Alexsander 
       link: https://github.com/YeldhamDev
-  media: placeholder.webm
+  media_author:
+    name:  Michael Alexsander
+    link: https://github.com/YeldhamDev
+  media: animation_editor_goodies.webm
+  poster: animation_editor_goodies.webp
 
 # Export
 
@@ -430,7 +434,10 @@ patch_pcks:
   contributors:
     - name: Mikael Hermansson
       link: https://github.com/mihe
-  media: placeholder.png
+  media_author:
+    name:  Mikael Hermansson
+    link: https://github.com/mihe
+  media: patch_pcks.webp
 
 # Input
 
@@ -446,7 +453,7 @@ custom_keyboard_shortcuts:
       link: https://github.com/ryevdokimov
     - name: Igor Kordiukiewicz
       link: https://github.com/IgorKordiukiewicz
-  media: placeholder.webm
+  media: custom_keyboard_shortcuts.webp
 
 controllers_led:
   title: Light Up Your Gamepads
@@ -472,7 +479,10 @@ improved_lod:
   contributors:
     - name: Arseny Kapoulkine 
       link: https://github.com/zeux
-  media: placeholder.webm
+  media_author:
+    name:  Arseny Kapoulkine
+    link: https://github.com/zeux
+  media: improved_lod.webp
 
 faster_textures:
   title: 'Faster than you can say: Texture'
@@ -484,7 +494,10 @@ faster_textures:
   contributors:
     - name: BlueCube3310 
       link: https://github.com/BlueCube3310
-  media: placeholder.webm
+  media_author:
+    name:  BlueCube3310
+    link: https://github.com/BlueCube3310
+  media: faster_textures.webp
 
 ## Rendering
 
@@ -498,7 +511,10 @@ agx_parameters:
   contributors:
     - name: Allen Pestaluky  
       link: https://github.com/allenwp
-  media: placeholder.webm
+  media_author:
+    name: Allen Pestaluky
+    link: https://github.com/allenwp
+  media: agx_parameters.webp
 
 glow_blending:
   title: Glow in the dark
@@ -512,7 +528,10 @@ glow_blending:
       link: https://github.com/allenwp
     - name: Hugo Locurcio
       link: https://github.com/Calinou
-  media: placeholder.webm
+  media_author:
+    name: Allen Pestaluky
+    link: https://github.com/allenwp
+  media: glow_blending.webp
 
 radiance_reflection_probes_improvement:
   title: Lighter Localized Reflections
