@@ -459,7 +459,9 @@ controllers_led:
   title: Light Up Your Gamepads
   subtitle: Foundation for advanced joypad features support
   text: |
-    You can now customize the LED light colors on supported controllers, but this is only the beginning! Godot 4.6 lays the foundation for advanced joypad features support. Starting this release, the door is wide open for the integration of joypad motion sensors (accelerometer and gyroscope), touchpads, haptic feedback, joypad information querying (controller type, face button layout scheme, connection type, battery state, etc.) and other custom controller options (including adaptive triggers). Upcoming releases will allow you to fully leverage the capabilities of modern controllers to set up a richer gaming experience in your projects.
+    You can now customize the LED light colors on supported controllers, but this is only the beginning! Godot 4.6 lays the foundation for advanced joypad features support.
+
+    Starting this release, the door is wide open for the integration of motion sensors, touchpads, haptic feedback, adaptive triggers, and controller information queries like controller type, button layout, connection method, and battery state. Upcoming releases will allow you to fully leverage the capabilities of modern controllers to set up a richer gaming experience in your projects.
 
   read_more: https://github.com/godotengine/godot/pulls?q=is%3Apr+111681+or+111707
   contributors:
