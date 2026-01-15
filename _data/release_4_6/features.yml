@@ -175,8 +175,8 @@ rotate_2d_tile:
     - name: Dexter
       link: https://github.com/DexterFstone
   media_author:
-    name: Dexter
-    link: https://github.com/DexterFstone
+    name: RespiteFromReality
+    link: https://github.com/RespiteFromReality
   media: turn_2d_tiles.webm
   poster: turn_2d_tiles.webp
 
