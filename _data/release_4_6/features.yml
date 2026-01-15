@@ -283,6 +283,9 @@ ui_margin:
     - name: Malcolm Anderson
       link: https://github.com/Meorge
   media: control_margin.webp
+  media_author:
+    name: RespiteFromReality
+    link: https://github.com/RespiteFromReality
 
 # Editor
 
