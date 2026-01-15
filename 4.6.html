@@ -164,16 +164,18 @@ title: Godot 4.6
 
             <h4 class="sub-section">Internationalization</h4>
 
-            {% include_relative _components/card.html name="csv_translation_improvement" size="medium" order="reverse"%}
-            {% include_relative _components/card.html name="csharp_translation_parser_support" size="medium"%}
+            <div class="sub-grid">
+                {% include_relative _components/card.html name="csv_translation_improvement"%}
+                {% include_relative _components/card.html name="csharp_translation_parser_support"%}
+            </div>
 
 
             <h4 class="sub-section">XR</h4>
             
-            {% include_relative _components/card.html name="openxr_spatial_entities" size="medium"%}
+            {% include_relative _components/card.html name="xr_editor_android" size="large"%}
             <div class="sub-grid">
                 {% include_relative _components/card.html name="openxr_support" order="reverse"%}
-                {% include_relative _components/card.html name="xr_editor_android"%}
+                {% include_relative _components/card.html name="openxr_spatial_entities"%}
             </div>
 
         </section>
