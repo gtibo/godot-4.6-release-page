@@ -17,8 +17,8 @@ new_theme:
   - name: Michael Alexander
     link: https://github.com/YeldhamDev
   media_author:
-    name: MediaAuthor
-    link: https://github.com/
+    name: Passivestar
+    link: https://github.com/passivestar
   media: new_theme.webp
 
 jolt_default:
