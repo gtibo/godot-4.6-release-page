@@ -412,6 +412,8 @@ h1, h2, h3, h4, h5, h6 {
     align-self: center;
     color: var(--color-godot-but-a-little-brighter);
     font-family: var(--font-family-title-alt);
+    text-transform: capitalize;
+    hyphens: auto;
   }
 }
 
