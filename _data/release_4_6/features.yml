@@ -346,8 +346,8 @@ resource_preview:
     - name: Malcolm Anderson
       link: https://github.com/Meorge
   media_author:
-    name: Malcolm Anderson
-    link: https://github.com/Meorge
+    name: RespiteFromReality
+    link: https://github.com/RespiteFromReality
   media: resource_preview.webm
   poster: resource_preview.webp
 
