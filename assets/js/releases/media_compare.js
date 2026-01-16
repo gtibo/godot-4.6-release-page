@@ -14,6 +14,10 @@
         let onMouseEvent = function(e){
             let mousePressed = e.buttons == 1;
             if (!mousePressed) return;
+
+            e.stopPropagation();
+            e.preventDefault();
+
             let percent = clamp(e.layerX / compareBlock.clientWidth, 0.0, 1.0) * 100.0;
 
             if(percent < 10) {
