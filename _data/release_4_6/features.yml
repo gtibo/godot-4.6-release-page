@@ -110,7 +110,7 @@ new_ssr:
   media: new_ssr.webm
 
 highlights_conclusion:
-  title: Ok, so what changes for you?
+  title: So... what changes for you?
   subtitle: Differences you can expect in everyday development
   text: |
     With loads and loads of new features this release, it's not always easy to tell at a quick glance which ones actually affect what you do day in and day out and which ones don't.

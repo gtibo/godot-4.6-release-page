@@ -17,21 +17,13 @@
     .content{
         z-index: 10;
     }
-    .title{
-        font-size: 1.6em;
-        margin-bottom: var(--xss);
-        font-weight: 700;
-    }
-    .subtitle{
-        font-size: 1.2em;
-        margin-bottom: var(--s);
-        font-weight: 600;
+    h4.subtitle{
         color: #FFD500;
     }
     a{
         color: var(--main-text-color);
         font-weight: 600;
-        font-size: 1.2em;
+        font-size: 1.6rem;
     }
     .body{
         font-size: 1.2em;
