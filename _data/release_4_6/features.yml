@@ -560,6 +560,28 @@ radiance_reflection_probes_improvement:
     name: DarioSamo
     link: https://github.com/DarioSamo
   media: radiance_reflection_probes_improvement.webp
+  
+mobile_3d_upgrade:
+  title: Banding dismissed
+  subtitle: Material debanding and improved HDR precision
+  text: |
+    The Mobile renderer steps up for 3D. Previously, visible color banding made it a tough sell for projects aiming at the highest visual fidelity. Not anymore!
+
+    **Material debanding** is now available for 3D: enable the existing debanding project setting and watch those ugly color bands disappear from your scenes. Additionally, when HDR 2D is enabled, the renderer now maintains higher color precision throughout the entire 3D pipeline, preventing quality loss.
+
+    Combined with all the optimizations unique to the Mobile renderer, these changes make it an excellent choice for high-performance 3D games on both mobile and desktop platforms.
+
+  read_more: https://github.com/godotengine/godot/pulls?q=is%3Apr+109084+or+109971+
+  contributors:
+    - name: Hugo Locurcio
+      link: https://github.com/Calinou
+    - name: Allen Pestaluky
+      link: https://github.com/allenwp
+    - name: Clay John
+      link: https://github.com/clayjohn
+  media_author:
+    name: Allen Pestaluky
+    link: https://github.com/allenwp
 
 # Internationalization
 
