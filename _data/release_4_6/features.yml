@@ -10,7 +10,7 @@ new_theme:
 
     The new grayscale allows you to do color-sensitive work on your game without the blue tint altering your perception.
 
-    Time for a test drive! Give your eyes some time to get used to the new look before you can start to notice its impact. If you find you still prefer the classic theme, our friends at GDQuest walk you through the [steps to set it back](https://gdquest.com/library/godot_4_6_workflow_changes#the-godot-editor) in this article dedicated to workflow changes.
+    Time for a test drive! Give your eyes some time to get used to the new look before you can start to notice its impact. If you still prefer the classic theme, you can easily switch back in the editor settings. Learn more in [this article by GDQuest](https://gdquest.com/library/godot_4_6_workflow_changes#the-godot-editor).
 
   read_more: https://github.com/godotengine/godot/pull/111118
   contributors:
