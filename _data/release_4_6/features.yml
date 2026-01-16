@@ -440,8 +440,8 @@ patch_pcks:
     - name: Mikael Hermansson
       link: https://github.com/mihe
   media_author:
-    name:  Mikael Hermansson
-    link: https://github.com/mihe
+    name:  RespiteFromReality
+    link: https://github.com/RespiteFromReality
   media: patch_pcks.webp
 
 # Input
