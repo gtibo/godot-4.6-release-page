@@ -263,7 +263,6 @@ body {
     }
     .content{
       flex:1;
-      max-width: 60ch;
     }
   }
 }
@@ -517,6 +516,9 @@ body {
     }
     &.medium{
       flex-direction: row;
+        .content{
+          max-width: 60ch;
+        }
         &.reverse{
           flex-direction: row-reverse;
         }
