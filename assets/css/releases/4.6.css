@@ -39,7 +39,7 @@ body {
   min-height: 100%;
   color: var(--main-text-color);
   background-color: var(--main-bg-color);
-  font-size: 0.8em;
+  font-size: 1rem;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family-titles);
@@ -206,20 +206,20 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 1em;
   background-color: var(--card-bg-color);
   .content{
-    padding: 2.0em 2.2em;
+    padding: 1.8em 0.9em;
     .note{
       font-size: 0.8em;
       font-style: italic;
     }
   }
   .title{
-    font-size: 2.7rem;
+    font-size: 1.7rem;
     margin-bottom: 1rem;
     font-weight: 700;
     line-height: 104%;
   }
   .subtitle{
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     margin-bottom: var(--s);
     font-weight: 600;
     color: var(--color-godot-but-a-little-brighter);
@@ -332,7 +332,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 1.2em;
   }
   h1{
-    font-size: 1.2em;
+    font-size: 1.8rem;
     margin-bottom: var(--s);
     font-weight: 900;
   }
@@ -343,7 +343,6 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     color: var(--color-godot-but-desaturated);
   }
-  .btn-xl{font-size: 0.8em;}
 }
 
 .preamble{
@@ -393,7 +392,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .section-body{
   max-width: min(100%, 1200px);
-  margin: 0em 1em;
+  margin: 0em 1.5em;
   width: full;
   display: flex;
   flex-direction: column;
@@ -407,7 +406,7 @@ h1, h2, h3, h4, h5, h6 {
   .sub-section{
     margin-top: 1.6rem;
     margin-bottom: 1rem;
-    font-size: 5.1rem;
+    font-size: 3.1rem;
     font-weight: 200;
     align-self: center;
     color: var(--color-godot-but-a-little-brighter);
@@ -556,11 +555,18 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.4em;
   }
   .section-body{
+    margin: 0em 1em;
     .sub-grid{
       flex-direction: row;
     }
+    .sub-section{
+      font-size: 5.1rem;
+    }
   }
   .card{
+    .body{
+      padding: 2.0em 2.2em;
+    }
     &.large{
       .body{
         columns: 2;
@@ -577,6 +583,12 @@ h1, h2, h3, h4, h5, h6 {
         &.reverse{
           flex-direction: row-reverse;
         }
+    }
+    .title{
+      font-size: 2.7rem;
+    }
+    .subtitle{
+      font-size: 1.8rem;
     }
   }
 }

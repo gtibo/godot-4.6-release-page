@@ -23,7 +23,7 @@
     a{
         color: var(--main-text-color);
         font-weight: 600;
-        font-size: 1.6rem;
+        font-size: 1.2rem;
     }
     .body{
         font-size: 1.2em;
@@ -41,6 +41,13 @@
             border-color: var(--main-text-color);
             border-bottom: solid;
         }
+    }
+  }
+}
+@media (min-width: 620px) {
+  .gdquest-card{
+    a{
+        font-size: 1.6rem;
     }
   }
 }
