@@ -630,6 +630,11 @@ mobile_3d_upgrade:
   media_author:
     name: Allen Pestaluky
     link: https://github.com/allenwp
+  compare:
+    before_image: debanding_off.webp
+    after_image: debanding_on.webp
+    before_text: HDR 2D without debanding
+    after_text: HDR 2D with debanding
 
 # Internationalization
 
