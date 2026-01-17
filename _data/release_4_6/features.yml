@@ -106,6 +106,9 @@ new_ssr:
   contributors:
   - name: Skyth
     link: https://github.com/blueskythlikesclouds
+  media_author:
+    name: Passivestar
+    link: https://github.com/passivestar
   poster: new_ssr.webp
   media: new_ssr.webm
 
