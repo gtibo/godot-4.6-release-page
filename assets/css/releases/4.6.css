@@ -1,11 +1,10 @@
 @import "./reset.css";
 @import "./gdquest.css";
-@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   --main-text-color: #FBFBFF;
-  --main-bg-color: #25282B;
-  --card-bg-color: #1D1D1D;
+  --main-bg-color: #1D1D1D;
+  --card-bg-color: #25282B;
   --accent-color: #1684D4;
   --accent-color-hover: #41A6F0;
   --blank-color: #282828;
@@ -14,9 +13,9 @@
   --color-godot-but-even-brighter: #5fbbff;
   --color-godot-but-darker: #7998af;
   --color-godot-but-desaturated: #a9d7f9;
-  --font-family-titles: 'Montserrat', Avenir, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
-  --font-family-body: 'Cabin', 'Arial', 'Helvetica', sans-serif;
-  --font-family-title-alt: 'Roboto Condensed', 'Roboto', 'Arial', sans-serif;
+  --font-family-titles: 'SplineSans', Avenir, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+  --font-family-body: 'SplineSans', 'Roboto', 'Arial', sans-serif;
+  --font-family-title-alt: 'SplineSans', 'Roboto', 'Arial', sans-serif;
   --xxs: 0.2em;
   --xs: 0.4em;
   --s: 0.6em;
@@ -26,6 +25,12 @@
   --xxl: 4.2em;
 }
 
+@font-face {
+    font-family: "SplineSans";
+    src: url("../../fonts/SplineSans-VariableFont_wght.ttf");
+    font-weight: 100 1000;
+    font-display: swap;
+}
 
 html {
     height: 100%;
@@ -206,26 +211,26 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 1em;
   background-color: var(--card-bg-color);
   .content{
-    padding: 1.8em 0.9em;
+    padding: 1.8em 1.4em;
     .note{
       font-size: 0.8em;
       font-style: italic;
     }
   }
   .title{
-    font-size: 1.7rem;
+    font-size: 1.7em;
     margin-bottom: 1rem;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 104%;
   }
   .subtitle{
-    font-size: 1.2rem;
+    font-size: 1.2em;
     margin-bottom: var(--s);
-    font-weight: 600;
+    font-weight: 500;
     color: var(--color-godot-but-a-little-brighter);
   }
   .body{
-    font-size: 1.3125em;
+    font-size: 1.2em;
     margin-bottom: 2.2rem;
     opacity: 80%;
     p{
@@ -363,15 +368,15 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--color-godot-but-a-little-brighter);
-  margin-bottom: var(--xl);
+  background: linear-gradient(25deg,var(--main-bg-color) 0%, var(--card-bg-color) 100%);
+  margin-bottom: var(--xxl);
   padding: var(--xxl) 2em;
   width: 100%;
   .title{
     position: relative;
-    font-size: 2.4rem;
+    font-size: 3.0rem;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 400;
   }
   p{
     opacity: 80%;
@@ -391,21 +396,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-body{
-  max-width: min(100%, 1200px);
+  max-width: min(100%, 1400px);
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: var(--l);
+  margin: 0em 1.5em;
+  margin-bottom: 4em;
   .sub-grid{
     display: flex;
     flex-direction: column;
     gap: var(--m);
   }
   .sub-section{
-    margin-top: 1.6rem;
-    margin-bottom: 1rem;
-    font-size: 3.1rem;
-    font-weight: 200;
+    margin-top: 1.8rem;
+    margin-bottom: 1.2rem;
+    font-size: 2.4rem;
     align-self: center;
     color: var(--color-godot-but-a-little-brighter);
     font-family: var(--font-family-title-alt);
@@ -419,28 +425,24 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
   position: absolute;
   height: 100%;
-  left:2em;
+  left:0em;
   z-index: 10;
   ul{
-    background-color: var(--card-bg-color);
     position: sticky;
     top: 2em;
     list-style: none;
     margin: 0;
-    padding: 1rem 1rem 1rem 0.8rem;
     border-radius: 0.4em;
-    font-size: 1.3rem;
+    font-size: 1.2em;
     display: grid;
     gap: 0.7rem;
     scroll-target-group: auto;
-    overflow: hidden;
   }
   li{
     margin-bottom: 0;
   }
   a{
     color: var(--main-text-color);
-    font-weight: 500;
     text-decoration: none;
     opacity: 60%;
     position: relative;
@@ -540,7 +542,13 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@media (min-width: 620px) {
+@media (max-width: 1200px) {
+  .section-body{
+    padding: 0 1em;
+  }
+}
+
+@media (min-width: 1200px) {
   body{
     font-size: 1.0em;
   }
@@ -553,19 +561,14 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.4em;
   }
   .section-body{
-    margin: 0em 1.5em;
-    margin-bottom: 4em;
     .sub-grid{
       flex-direction: row;
     }
     .sub-section{
-      font-size: 5.1rem;
+      font-size: 2.4rem;
     }
   }
   .card{
-    .body{
-      padding: 2.0em 2.2em;
-    }
     &.large{
       .body{
         columns: 2;
@@ -584,10 +587,10 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
     .title{
-      font-size: 2.7rem;
+      font-size: 2.4rem;
     }
     .subtitle{
-      font-size: 1.8rem;
+      font-size: 1.6rem;
     }
   }
 }
