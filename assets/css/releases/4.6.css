@@ -558,7 +558,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   .section-body{
     padding: 0 1em;
   }
