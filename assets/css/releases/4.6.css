@@ -211,7 +211,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 1em;
   background-color: var(--card-bg-color);
   .content{
-    padding: 1.8em 1.4em;
+    padding: 2.0em 2.2em;
     .note{
       font-size: 0.8em;
       font-style: italic;
@@ -219,12 +219,12 @@ h1, h2, h3, h4, h5, h6 {
   }
   .title{
     font-size: 1.7em;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     font-weight: 600;
     line-height: 104%;
   }
   .subtitle{
-    font-size: 1.2em;
+    font-size: 1.0rem;
     margin-bottom: var(--s);
     font-weight: 500;
     color: var(--color-godot-but-a-little-brighter);
