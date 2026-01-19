@@ -8,7 +8,7 @@ The current build is [available here](https://gtibo.github.io/godot-4.6-release-
 
 - [ ] Better banner
 - [ ] Improve the navigation bar (show current section and subsections)
-- [ ] Standardize author names on cards
+- [x] Standardize author names on cards
 - [x] Autoplay videos with Intersection Observer + better UX
 - [x] Don't capitalize usernames in the list of contributors at the bottom
 - [x] Add contributors' names to the contributors' wall

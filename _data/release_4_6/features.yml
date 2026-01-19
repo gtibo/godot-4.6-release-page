@@ -36,7 +36,7 @@ jolt_default:
   contributors:
   - name: Mikael Hermansso
     link: https://github.com/mihe
-  - name: Calinou
+  - name: Hugo Locurcio
     link: https://github.com/Calinou
   media_author:
     name: Tibo
@@ -161,11 +161,11 @@ libgodot:
 
   read_more: https://github.com/godotengine/godot/pull/110863
   contributors:
-    - name: Kisg
+    - name: Gergely Kis
       link: https://github.com/kisg
-    - name: Konczg
+    - name: Gábor Koncz
       link: https://github.com/konczg
-    - name: Zorbathut
+    - name: Ben Rog-Wilhelm
       link: https://github.com/zorbathut
 
 private_signals:
@@ -421,7 +421,7 @@ editor_enhancements:
   contributors:
     - name: Tomasz Chabora
       link: https://github.com/KoBeWi
-    - name: Timothyqiu
+    - name: Haoyu Qiu
       link: https://github.com/timothyqiu
     - name: Kleonc
       link: https://github.com/kleonc
@@ -452,7 +452,7 @@ animation_editor_goodies:
   contributors:
     - name: Mikael Hermansson
       link: https://github.com/mihe
-    - name: Arnklit
+    - name: Kasper Arnklit Frandsen
       link: https://github.com/Arnklit
     - name: Michael Alexsander
       link: https://github.com/YeldhamDev
