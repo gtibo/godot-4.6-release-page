@@ -4,6 +4,8 @@
     let navElement = undefined;
 
     let setCurrentSection = function(sectionElement){
+        if(!sectionElement) return;
+
         let newNaveElement = tocNav.querySelector(`a[href='#${sectionElement.id}']`);
         let previousNavElement = navElement;
 
