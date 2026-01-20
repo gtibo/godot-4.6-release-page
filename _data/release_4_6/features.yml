@@ -646,10 +646,10 @@ mobile_3d_upgrade:
     name: Hugo Locurcio
     link: https://github.com/Calinou
   compare:
-    before_image: debanding_off.webp
-    after_image: debanding_on.webp
-    before_text: HDR 2D without debanding
-    after_text: HDR 2D with debanding
+    before_image: hdr2d_debanding_4.5.1.webp
+    after_image: hdr2d_debanding_4.6.webp
+    before_text: Before
+    after_text: After
 
 # Internationalization
 
