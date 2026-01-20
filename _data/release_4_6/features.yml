@@ -6,7 +6,7 @@ new_theme:
 
     You can now choose between the older "Classic" theme and the newer "Modern" theme with Godot 4.6 shipping out with the "Modern" theme by default.
 
-    The new theme which will continue to mature with user feedback, brings you subtle contrast adjustments and improved readability and spacing between UI elements. Many testers have found it helps reduce competition on focus and gives center-stage to the viewport where your game lives.
+    The new theme, which will continue to mature with user feedback, brings you subtle contrast adjustments and improved readability and spacing between UI elements. Many testers have found it helps reduce competition on focus and gives center-stage to the viewport where your game lives.
 
     The new grayscale allows you to do color-sensitive work on your game without the blue tint altering your perception.
 
@@ -16,7 +16,7 @@ new_theme:
   contributors:
   - name: Passivestar
     link: https://github.com/passivestar
-  - name: Michael Alexander
+  - name: Michael Alexsander
     link: https://github.com/YeldhamDev
   media_author:
     name: Passivestar
@@ -34,7 +34,7 @@ jolt_default:
     <span class="note">Existing projects aren't affected: your current physics settings stay exactly as they are. Only new projects use Jolt by default. You can manually change the physics engine by going to the project settings.</span>
   read_more: https://github.com/godotengine/godot/pull/105737
   contributors:
-  - name: Mikael Hermansso
+  - name: Mikael Hermansson
     link: https://github.com/mihe
   - name: Hugo Locurcio
     link: https://github.com/Calinou
@@ -138,7 +138,7 @@ unique_node_ids:
   text: |
     Nodes now have a unique internal ID, allowing the engine to track them reliably even when scenes are reorganized or refactored.
 
-    Just because you rename or move a node, doesn't mean it will suddenly forget who it is and where it comes from.
+    Just because you rename or move a node doesn't mean it will suddenly forget who it is and where it comes from.
 
     So far, renaming nodes or changing scene hierarchies could sometimes break references in complex setups with inherited or instantiated scenes.
 
@@ -270,9 +270,9 @@ separated_mouse_and_keyboard_focus:
   title: Click != Focus
   subtitle: Separated mouse and keyboard focus
   text: |
-    As of Godot 4.6, clicking a button with your mouse or trackpad will finally no longer force the blue focus outline to appear as you would expect it to when you're navigating with a gamepad of keyboard.
+    As of Godot 4.6, clicking a button with your mouse or trackpad will finally no longer force the blue focus outline to appear as you would expect it to when you're navigating with a gamepad or keyboard.
 
-    You decide how to style each focus scheme independently without workarounds or hacks. Whether you keep the behavior unified or you decide you don't need the focus outline when cliking with a mouse or trackpad because you know where you clicked... It's *your* call!
+    You decide how to style each focus scheme independently without workarounds or hacks. Whether you keep the behavior unified or you decide you don't need the focus outline when clicking with a mouse or trackpad because you know where you clicked... It's *your* call!
 
   read_more: https://github.com/godotengine/godot/pull/110250
   contributors:
@@ -387,7 +387,7 @@ objectdb_snapshots:
 
   read_more: https://github.com/godotengine/godot/pull/97210
   contributors:
-    - name: Aleksander Lytinsky
+    - name: Aleksander Litynski
       link: https://github.com/AleksLitynski
   media: objectdb_snapshots.webp
 
@@ -486,7 +486,7 @@ patch_pcks:
 # Input
 
 custom_keyboard_shortcuts:
-  title: Poweruse that editor
+  title: Power-use that editor
   subtitle: Add custom keyboard shortcuts through EditorSettings
   text: |
     Godot 4.6 gives you the power to define and register new keyboard shortcuts directly through `EditorSettings`. This opens up more customization for your workflow and lets plugins expose their own commands that feel like native editor actions.
@@ -841,10 +841,10 @@ json_gdextension:
       link: https://github.com/aaronfranke
   media: json_gdextension.webp
 
-## GDscript
+## GDScript
 
 step_out_button:
-  title: Get outa that function already
+  title: Get outta that function already
   subtitle: 'Script Debugger: Step Out Control'
   text: |
     If you've ever gotten stuck inside a function while debugging, wishing you could jump straight back to the caller, this small feature will surely improve your quality-of-life.
