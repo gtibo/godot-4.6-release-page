@@ -1,12 +1,25 @@
 import * as THREE from "../modules/three.module.min.js";
 import { GLTFLoader } from "../modules/GLTFLoader.js";
 
+// Source - https://stackoverflow.com/a
+// Posted by Alnitak, modified by community. See post 'Timeline' for change history
+// Retrieved 2026-01-20, License - CC BY-SA 3.0
+
+function mapRange(value, low1, high1, low2, high2) {
+    return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
+}
+
+function clamp(number, min, max) {
+    return Math.max(min, Math.min(number, max));
+}
+
 const container = document.querySelector("#three-container");
 const canvas = document.querySelector("#three-canvas");
 
 let mouse = {x: 0.0, y: 0.0}
 let scrollPercent = 0.0;
 let camera;
+let rightSceneRoot = undefined;
 
 const scene = new THREE.Scene();
 scene.background = new THREE.Color( 0x151515 );
@@ -50,9 +63,16 @@ window.addEventListener("resize", (e) => {updateViewportSize()});
 function updateViewportSize(){
     let w = container.clientWidth * window.devicePixelRatio,
         h = container.clientHeight * window.devicePixelRatio;
-    camera.fov = 25.0;
-    camera.aspect = w / h;
+    let ratio = w / h;
+
+    camera.aspect = ratio;
     renderer.setSize(w, h, false);
+
+    if(rightSceneRoot){
+        rightSceneRoot.position.x = mapRange(clamp(ratio, 0.5, 1.5), 0.5, 1.5, 2.5, 5.0);
+        rightSceneRoot.position.y = mapRange(clamp(ratio, 0.5, 1.5), 0.5, 1.5, -1.5, 0.0);
+    }
+    camera.fov = mapRange(clamp(ratio, 0.5, 1.5), 0.5, 1.5, 35.0, 25.0);
     camera.updateProjectionMatrix();
 }
 
@@ -239,9 +259,11 @@ loader.load(import.meta.resolve("./banner.glb"), function ( gltf ) {
     GLBScene.position.x = 2.0;
     
     GLBScene.traverse(function(child) {
+        if(child.name == "RightSceneRoot"){
+            rightSceneRoot = child;
+        }
         if(child.name == "Camera"){
             camera = child;
-            updateViewportSize();
         }
         if(child.name.includes("ScreenLights")) child.material = screenLightsMat;
         if(child.name.includes("MaskGrid")) child.material = gridMat;
@@ -264,6 +286,8 @@ loader.load(import.meta.resolve("./banner.glb"), function ( gltf ) {
     action.play();
 
     scene.add( GLBScene );
+
+    updateViewportSize();
 
 }, undefined, function ( error ) {
     console.error( error );

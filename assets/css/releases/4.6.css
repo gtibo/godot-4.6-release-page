@@ -53,14 +53,14 @@ body {
   background-color: var(--accent-color);
   color: var(--main-text-color);
   font-weight: 600;
-  border-radius: 0.5rem;
+  border-radius: 10.0em;
   text-decoration: none;
   display: inline-block;
   transition: background-color 0.2s ease-in-out;
-  &.btn-xl{
-    padding: 0.8em 1.0em;
-    font-size: 1.2em;
-  }
+
+  padding: 0.8em 1.0em;
+  font-size: 1.2em;
+
   &:hover{
     background-color: var(--accent-color-hover);
   }
@@ -179,8 +179,22 @@ body {
     font-size: 0.9em;
   }
   .hero{
-    h1{font-size: 2.0rem;}
-    h2{font-size: 2.8em;}
+    min-height: 80vh;
+    justify-content: center;
+    .content{
+      position:relative;
+      margin-top: 0;
+      max-width: 1400px;
+      align-items: start;
+      font-size: 2.0em;
+    }
+    .btn{
+      font-size: 1.0em;
+    }
+    .header{
+      display: block;
+      text-align: left;
+    }
   }
   .preamble{
     font-size: 1.4em;
