@@ -85,6 +85,7 @@
       transform: translate(-50%, 0%);
 
       svg{
+        transition: transform 0.2s ease-out, opacity 0.2s ease-out;
         position: absolute;
         border-radius: 50%;
         padding: 0.35em;
@@ -120,6 +121,9 @@
       padding-right: 0.8em;
     }
     &.transition{
+      svg{
+        transform: translate(-50%, -50%) scale(0.2);
+      }
       .before{
         transition: all;
         transition-duration: 0.2s;
@@ -127,6 +131,7 @@
       .slider{
         transition: all;
         transition-duration: 0.2s;
+        opacity: 0%;
       }
     }
   }

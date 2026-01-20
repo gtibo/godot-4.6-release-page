@@ -574,7 +574,11 @@ agx_parameters:
   media_author:
     name: Allen Pestaluky
     link: https://github.com/allenwp
-  media: agx_parameters.webp
+  compare:
+    before_image: agx_default_contrast.webp
+    after_image: agx_contrast_1.53.webp
+    before_text: Default contrast
+    after_text: 1.53 contrast
 
 glow_blending:
   title: Glow in the dark
@@ -591,7 +595,11 @@ glow_blending:
   media_author:
     name: Allen Pestaluky
     link: https://github.com/allenwp
-  media: glow_blending.webp
+  compare:
+    before_image: glow_before.webp
+    after_image: glow_after.webp
+    before_text: Before
+    after_text: After
 
 radiance_reflection_probes_improvement:
   title: Lighter Localized Reflections
@@ -610,7 +618,11 @@ radiance_reflection_probes_improvement:
   media_author:
     name: DarioSamo
     link: https://github.com/DarioSamo
-  media: radiance_reflection_probes_improvement.webp
+  compare:
+    before_image: radiance_reflection_probes_before.webp
+    after_image: radiance_reflection_probes_after.webp
+    before_text: Before
+    after_text: After
 
 mobile_3d_upgrade:
   title: Banding dismissed
@@ -631,8 +643,8 @@ mobile_3d_upgrade:
     - name: Clay John
       link: https://github.com/clayjohn
   media_author:
-    name: Allen Pestaluky
-    link: https://github.com/allenwp
+    name: Hugo Locurcio
+    link: https://github.com/Calinou
   compare:
     before_image: debanding_off.webp
     after_image: debanding_on.webp
