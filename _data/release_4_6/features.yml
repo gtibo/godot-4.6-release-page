@@ -152,7 +152,7 @@ unique_node_ids:
       link: https://github.com/reduz
 
 libgodot:
-  title: Godot as a Library!
+  title: Godot as a library!
   subtitle: Introducing LibGodot
   text: |
     With the new LibGodot, you can now embed the engine directly into your own applications. Instead of running Godot as a separate executable, you can control startup, manage the engine loop, and integrate it seamlessly into custom workflows. Whether you’re building a specialized editor, a hybrid application, or embedding Godot into a larger system, LibGodot gives you the flexibility to make it work your way!
@@ -223,7 +223,7 @@ new_select_mode:
   poster: select_mode.webp
 
 bresenham_gridmap:
-  title: Mind the Gap
+  title: Mind the gap
   subtitle: Bresenham line algorithm for GridMap drawing
   text: |
     This is one that the 3D level builders among us will surely appreciate! Godot 4.6 improves how `GridMap` painting and erasing behaves in the editor by using the classic Bresenham line algorithm to interpolate between input points.
@@ -318,7 +318,7 @@ ui_margin:
 # Editor
 
 hover_tabbar:
-  title: Drag, Hover n' Drop
+  title: Drag, hover n' drop
   subtitle: Switch tabs on hover while dragging
   text: |
     No more clicking to switch tabs and views before you drag and drop something. You can now just drag your resource and hover the destination tab to switch to it and drop your resource where it goes!
@@ -355,7 +355,7 @@ resource_preview:
   poster: resource_preview.webp
 
 error_click:
-  title: Error Error on the wall...
+  title: Error, Error on the wall...
   subtitle: Clickable files in the Output panel
   text: |
     When it's time to squash bugs, one of the things that grind you down as a dev is having to manually search for the culprit, dig out the file, scroll to the right line, and only then start fixing.
@@ -392,7 +392,7 @@ objectdb_snapshots:
   media: objectdb_snapshots.webp
 
 editor_enhancements:
-  title: Editor Loot Drop!
+  title: Editor loot drop!
   subtitle: Small editor enhancements with big impact on workflow
   text: |
     A lot of subtle editor improvements landed in 4.6 to reduce friction and help you work faster and more intuitively. Here's a quick round-up of all the little ways your editing experience is about to get noticeably happier:
@@ -502,7 +502,7 @@ custom_keyboard_shortcuts:
   media: custom_keyboard_shortcuts.webp
 
 controllers_led:
-  title: Light Up Your Gamepads
+  title: Light up your gamepads
   subtitle: Foundation for advanced joypad features support
   text: |
     You can now customize the LED light colors on supported controllers, but this is only the beginning! Godot 4.6 lays the foundation for advanced joypad features support.
@@ -524,7 +524,7 @@ controllers_led:
 # Import
 
 improved_lod:
-  title: So far so sharp
+  title: So far, so sharp
   subtitle: Component pruning for mesh simplifications
   text: |
     Godot now generates LOD (level-of-detail) models that better preserve the shape of the original object, particularly for meshes built from multiple separate parts.
@@ -602,7 +602,7 @@ glow_blending:
     after_text: After
 
 radiance_reflection_probes_improvement:
-  title: Lighter Localized Reflections
+  title: Lighter localized reflections
   subtitle: Octahedral maps for reflection and radiance probes
   text: |
     Reflection and radiance probes now use octahedral maps. This makes them cheaper to compute for your GPU and lighter on memory.
@@ -671,7 +671,7 @@ csv_translation_improvement:
       link: https://github.com/bruvzg
 
 csharp_translation_parser_support:
-  title: Bonjour C#
+  title: Bonjour, C#
   subtitle: C# Translation Parser Support
   text: |
     C# translation calls are now parsed just like GDScript, so localized text is collected automatically during pot/csv exports.
@@ -776,7 +776,7 @@ scrcpy_support:
 # Windows
 
 render_parity:
-  title: Render Parity
+  title: Render parity
   subtitle: Direct3D 12 as the new default on Windows
   text: |
     With Direct3D 12 now pretty much on par with Vulkan, new Windows projects default to Direct3D 12 for more stable driver support and fewer platform quirks. This improves cross-platform rendering consistency while keeping existing projects unchanged.
