@@ -282,7 +282,7 @@ separated_mouse_and_keyboard_focus:
   poster: new_focus.webp
 
 pivot:
-  title: Pivoting to new UI possibilities
+  title: Place a pivot
   subtitle: Set the pivot point more easily for Control nodes
   text: |
     Centering the pivot point of UI elements just got a whole lot easier!
@@ -560,7 +560,7 @@ faster_textures:
 ## Rendering
 
 agx_parameters:
-  title: Tone it down... or up!
+  title: Tone it down
   subtitle: Configurable AgX tonemapper parameters
   text: |
     AgX tonemapper now exposes **`agx_white` and `agx_contrast`**, letting you control how bright and contrasted your scenes appear and allowing you to achieve a more consistent hue on bright colors even at high contrast.
@@ -581,7 +581,7 @@ agx_parameters:
     after_text: 1.53 contrast
 
 glow_blending:
-  title: Glow's getting a glow-up
+  title: Glow in the dark
   subtitle: Improved glow blending defaults
   text: |
     Glow is now blended **before tonemapping**, with `Screen` as the new default mode. This corrects the order and improves visual results with at least similar or outright better performance. The tweak standardizes behavior across renderers and takes one more step towards improving HDR support.
