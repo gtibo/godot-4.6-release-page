@@ -48,6 +48,8 @@ body {
   color: var(--main-text-color);
   background-color: var(--main-bg-color);
   font-size: 0.8em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .btn{
@@ -125,6 +127,7 @@ body {
   text-align: justify;
   font-size: 1.15em;
   hyphens: auto;
+  gap: var(--s);
   p{
     max-width: 70ch;
   }
