@@ -887,12 +887,11 @@ bbcode_to_markdown:
 
 tracy_profiler:
   title: Go all Dick Tracy
-  subtitle: GDScript Tracy Profiling
+  subtitle: GDScript tracing profilers
   text: |
-    Ever wonder which of your GDScript functions is costing you in performance? Godot 4.6 now lets you profile GDScript using the dedicated Tracy profiler, giving you a detailed view of where time is spent in your scripts. You can pinpoint bottlenecks, see hotspots in functions, and optimize performance with confidence.
-    This is only the first step in a larger engine-wide effort to integrate dedicated profilers.
-
-    Here are [instructions](https://docs.godotengine.org/en/latest/engine_details/development/debugging/profiling/tracing_profilers.html) to start taking advantage of the Tracy integration!
+    Ever wonder which of your GDScript functions is costing you in performance? Godot 4.6 now lets you profile your scripts using dedicated tracing profilers like Tracy, Perfetto, and Instruments. These tools give you more detailed insights than the built-in profiler, letting you pinpoint bottlenecks, debug lag spikes, and optimize with confidence.
+    
+    Here are [instructions](https://docs.godotengine.org/en/latest/engine_details/development/debugging/profiling/tracing_profilers.html) to start taking advantage of these powerful profilers!
 
   read_more: https://github.com/godotengine/godot/pull/113279
   contributors:
@@ -900,8 +899,9 @@ tracy_profiler:
       link: https://github.com/Ivorforce
     - name: Samuel Nicholas
       link: https://github.com/enetheru
+    - name:  Stuart Carnie 
+      link: https://github.com/stuartcarnie
   media_author:
     name: Lukas Tenbrink
     link: https://github.com/Ivorforce
   media: tracy_profiler.webp
-
