@@ -1,10 +1,6 @@
 .gdquest-card{
     border-radius: 1em;
     background: linear-gradient(-45deg,rgba(141, 25, 215, 1) 0%, rgba(172, 60, 241, 1) 100%);
-    padding: 1.0em 1.4em;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
     position: relative;
     overflow: hidden;
     .logo{
@@ -13,6 +9,17 @@
         left:-15%;
         height: 180%;
         fill: rgba(141, 25, 215, 1);
+        z-index: 0;
+    }
+    .media-block{
+        position: relative;
+        z-index: 10;
+        video{
+            object-position: top;
+            &:hover{
+                transform: none;
+            }
+        }
     }
     .content{
         z-index: 10;

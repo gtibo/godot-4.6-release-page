@@ -125,10 +125,11 @@ highlights_conclusion:
     With Godot 4.6, you can mostly expect a small and varied collection of things you couldn't do before that you can do now.
 
   read_more: https://gdquest.com/library/godot_4_6_workflow_changes#the-godot-editor
-  contributors:
-    - name: GDQuest
-      link: https://gdquest.com/
-  media: placeholder.webm
+  media_author:
+    name: GDQuest
+    link: https://gdquest.com/
+  media: gdquest.webm
+  poster: gdquest.webp
 
 # General
 
