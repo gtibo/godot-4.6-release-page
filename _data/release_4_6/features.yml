@@ -728,9 +728,9 @@ xr_editor_android:
 
 android_gradle:
   title: Pronto Gradle
-  subtitle: Android Gradle build integration
+  subtitle: Android Editor Gradle build support
   text: |
-    This feature is a major win for the Android game and app makers among us. You can now officially build Android projects using Gradle directly from the editor through a companion app, which helps keep the editor itself lightweight. This puts an end to the so-far cumbersome process of exporting Android projects which previously involved manual Gradle setup, extra scripts, and juggling external tools.
+    This feature is a major win for the Android editor users among us. You can now officially build Android projects using Gradle directly from the Android editor through a companion app (GABE), which helps keep the editor itself lightweight. This also enables exporting apps with Android plugin support directly from Android, since plugin support relies on Gradle.
 
   read_more: https://github.com/godotengine/godot/pull/111732
   contributors:
