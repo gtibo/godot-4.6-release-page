@@ -814,7 +814,7 @@ parameters_and_values_as_required:
   text: |
     This one's for you if you're already taking advantage of GDExtension to write high-performance game code and editor plugins in languages like C and C++, or [the community-supported Rust, Zig and more](https://github.com/Godot-Languages-Support/godot-lang-support/blob/main/README.md)!
 
-    Starting Godot 4.6, you can now declare parameters and return values as **required**, meaning nullable values are no longer implicitly allowed in those positions. This is especially helpful in languages with strict nullable/optional types like Rust, Swift, or Kotlin, because it helps you catch mistakes at compile time or fail clearly at runtime!
+    Starting in Godot 4.6, parameters and return values in the Godot API can be declared as **required**, meaning nullable values are no longer implicitly allowed in those positions. This is especially helpful in languages with strict nullable/optional types like Rust, Swift, or Kotlin, because it helps you catch mistakes at compile time or fail clearly at runtime!
 
     The result is safer, clearer APIs with better integration of modern type systems in your tooling.
 
@@ -832,14 +832,12 @@ json_gdextension:
   text: |
     This one is mostly under the hood but to many of you it will come as a great relief and open new possibilities. As of this release, GDExtension's interface, the bridge between Godot and native code, is now stored in JSON instead of a C header.
 
-    This makes it much easier for tools, scripts, and language bindings to read, analyze, and work with the API automatically. Richer metadata makes it possible to expand practical applications, like the newly-introduced ability to declare builtin functions as deprecated. This long-awaited upgrade lays the foundation for faster automation, improved bindings, and smoother integration, unlocking possibilities that weren’t practical before.
+    This makes it much easier for tools, scripts, and language bindings to read, analyze, and work with the API automatically. This long-awaited upgrade lays the foundation for faster automation, improved bindings, and smoother integration, unlocking possibilities that weren’t practical before.
 
-  read_more: https://github.com/godotengine/godot/pulls?q=is%3Apr+107845+or+112290
+  read_more: https://github.com/godotengine/godot/pull/107845
   contributors:
     - name: David Snopek
       link: https://github.com/dsnopek
-    - name: Aaron Franke
-      link: https://github.com/aaronfranke
   media: json_gdextension.webp
 
 ## GDScript
