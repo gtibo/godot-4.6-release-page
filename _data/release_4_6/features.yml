@@ -780,8 +780,12 @@ render_parity:
 
   read_more: https://github.com/godotengine/godot/pull/113213
   contributors:
-    - name: Rémi Verschelde
-      link: https://github.com/akien-mga
+    - name: Pedro J. Estébanez
+      link: https://github.com/RandomShaper
+    - name: DarioSamo
+      link: https://github.com/DarioSamo
+    - name: Skyth
+      link: https://github.com/blueskythlikesclouds
   media: render_parity.webp
 
 # Physics
