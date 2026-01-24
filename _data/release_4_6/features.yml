@@ -59,7 +59,7 @@ new_ik:
     What's more, you can set the target of animation constraints to 3D nodes to make, for example, the arm of a character extend and snap to a weapon.
 
     The modular approach of this new framework lets you combine IK with other modifiers and constraints to fine-tune your procedural animations directly in the engine and documentation is in the works to help you make the best of the framework depending on your use case.
-  read_more: https://github.com/godotengine/godot/pull/110120
+  read_more: https://godotengine.org/article/inverse-kinematics-returns-to-godot-4-6/
   contributors:
   - name: Tokage
     link: https://github.com/TokageItLab
