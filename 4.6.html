@@ -293,6 +293,19 @@ authors_list: "0xcafeb33f,1|2frac,1|4d49,1|aaronfranke,5|aaronp64,4|AayushSarikh
             </div>
         <section>
 
+        {% assign credits = site.data.release_4_6.general.credits %}
+        <section id="credits">
+            <h4 class="title">{{credits.title}}</h4>
+            <div class="content">
+                {% for item in credits.list %}
+                        <h5 class="item-title">{{item.text}}</h5>
+                    {% if item.by %}
+                        <div class="by">{{item.by | markdownify}}</div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </section>
+
     </main>
     <script src="{{ site.baseurl }}/assets/js/releases/banner.js" type="module"></script>
     <script src="{{ site.baseurl }}/assets/js/releases/toc_nav.js" defer></script>

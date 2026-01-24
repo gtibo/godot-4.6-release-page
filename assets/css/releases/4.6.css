@@ -197,6 +197,36 @@ body {
     }
 }
 
+#credits{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8em;
+  margin-bottom: 8em;
+  text-align: center;
+  .title{
+    font-size: 1.6em;
+    margin-bottom: 2.0em;
+  }
+  .content{
+    font-size: 1.2em;
+    max-width: 70ch;
+    .item-title{
+      margin-top: 1.2em;
+      margin-bottom: 0.8em;
+      font-weight: 400;
+      opacity: 80%;
+    }
+    .by{
+      margin-bottom: 1.4em;
+    }
+    a{
+      color: var(--main-text-color);
+      font-weight: 600;
+    }
+  }
+}
+
 @media (min-width: 1400px) {
   .section-body{
     max-width: min(100%, 1400px);
