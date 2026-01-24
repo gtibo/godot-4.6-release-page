@@ -50,6 +50,7 @@ const observer = new IntersectionObserver(observerCallback, options);
 observer.observe(container);
 
 document.body.addEventListener("pointermove", function(e){
+    if (e.buttons != 0) return;
     mouse.x = e.clientX / container.clientWidth;
     mouse.y = e.clientY / container.clientHeight;
 })
@@ -288,6 +289,8 @@ loader.load(import.meta.resolve("./banner.glb"), function ( gltf ) {
     scene.add( GLBScene );
 
     updateViewportSize();
+
+    container.classList.add("loaded");
 
 }, undefined, function ( error ) {
     console.error( error );

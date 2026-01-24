@@ -48,6 +48,13 @@ authors_list: "0xcafeb33f,1|2frac,1|4d49,1|aaronfranke,5|aaronp64,4|AayushSarikh
     <section class="hero">
         <div id="three-container" style="z-index: 0; position: absolute; width: 100%; height: 100%;">
             <canvas id="three-canvas" style="position: absolute; width: 100%; height: 100%;"></canvas>
+            <div class="loader">
+                <span>loading</span>
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke-width="2" >
+                    <path d="M22 12C22 10.0222 21.4135 8.08879 20.3147 6.4443C19.2159 4.79981 17.6541 3.51808 15.8268 2.7612C13.9996 2.00433 11.9889 1.80629 10.0491 2.19215C8.10929 2.578 6.32746 3.53041 4.92893 4.92893C3.53041 6.32746 2.578 8.10929 2.19215 10.0491C1.80629 11.9889 2.00433 13.9996 2.7612 15.8268C3.51808 17.6541 4.79981 19.2159 6.4443 20.3147C8.08879 21.4135 10.0222 22 12 22" stroke="white" stroke-opacity="0.4"/>
+                    <path d="M12 22C13.3132 22 14.6136 21.7413 15.8268 21.2388C17.0401 20.7362 18.1425 19.9997 19.0711 19.0711C19.9997 18.1425 20.7362 17.0401 21.2388 15.8268C21.7413 14.6136 22 13.3132 22 12" stroke="white"/>
+                </svg>
+            </div>
         </div>
 
         <div class="content">
@@ -307,9 +314,9 @@ authors_list: "0xcafeb33f,1|2frac,1|4d49,1|aaronfranke,5|aaronp64,4|AayushSarikh
         </section>
 
     </main>
-    <script src="{{ site.baseurl }}/assets/js/releases/banner.js" type="module"></script>
     <script src="{{ site.baseurl }}/assets/js/releases/toc_nav.js" defer></script>
     <script src="{{ site.baseurl }}/assets/js/releases/video_player.js" defer></script>
     <script src="{{ site.baseurl }}/assets/js/releases/media_compare.js" defer></script>
+    <script src="{{ site.baseurl }}/assets/js/releases/banner.js" type="module"></script>
 </body>
 </html>
