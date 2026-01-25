@@ -177,7 +177,9 @@ tracing_profilers:
   title: Go all Dick Tracy
   subtitle: C++ tracing profilers
   text: |
-    Ever wonder which of your GDScript functions is costing you in performance, or which calls to Godot APIs are hogging your frame time? Godot 4.6 now lets you profile your scripts using dedicated tracing profilers like Tracy, Perfetto, and Instruments. These tools give you more detailed insights than the built-in profiler, letting you pinpoint bottlenecks, debug lag spikes, and optimize with confidence.
+    Ever wonder which of your script functions is costing you in performance, or which calls to Godot APIs are hogging your frame time? Godot 4.6 now lets you profile your scripts using dedicated tracing profilers like Tracy, Perfetto, and Instruments.
+    
+    These tools give you more detailed insights than the built-in profiler, letting you pinpoint bottlenecks, debug lag spikes, and optimize GDScript, C#, or GDExtension code with confidence.
 
     Here are [instructions](https://docs.godotengine.org/en/4.6/engine_details/development/profiling/index.html) to start taking advantage of these powerful profilers!
 
@@ -426,10 +428,10 @@ editor_enhancements:
     A lot of subtle editor improvements landed in 4.6 to reduce friction and help you work faster and more intuitively. Here's a quick round-up of all the little ways your editing experience is about to get noticeably happier:
 
     - You can now drag a resource directly into the script editor to automatically create an `@export` variable, saving time and reducing boilerplate when exposing properties.
+    
+    - The array Inspector got a facelift to make the most of available horizontal space, making deeply nested resources much easier to read and edit.
 
     - When testing your game in the editor, new controls let you slow down or speed up the game while it's running, making it easier to inspect physics behavior or fine-tune gameplay without extra debug code.
-
-    - The array inspector got a mini-facelift; no more ever-shrinking working space for deeply nested resources.
 
     - The Inspector now shows a dedicated icon for resources that are referenced elsewhere (linked-resources), helping you understand dependencies at a glance.
 

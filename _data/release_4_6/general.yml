@@ -13,8 +13,11 @@ conclusion:
 end_message:
   text: |
     Almost 3 years after the 4.0 release, Godot 4 is starting to be a mature engine, including a wide array of features that enable countless developers to publish games in all genres. For example, Steam got over [1,200 new Godot games](https://steamdb.info/stats/releases/?tech=Engine.Godot) in 2025, while itch.io consistently gets around [500 new Godot games per week](https://itch.io/game-development/engines/most-projects) (game jams, prototypes, etc.).
+    
     While every Godot user still has their own favorite missing feature which they're eagerly awaiting, for the most part the engine is fully capable. But there are still so many minor roadblocks, papercuts, workflow issues or outright bugs which can make the experience of developing and publishing games more painful than we'd like.
+    
     So for this release, there was a significant focus on polish and usability, aiming to firmly establish Godot as an engine that you can rely upon, while keeping the iteration speed, lightweightness, and flexibility which make users love it.
+    
     Close to 400 contributors were involved in this new feature release, authoring 2,001 (!) commits, and we want to thank them all for their amazing contributions, as well as all users who sponsor the Development Fund, reported bugs, opened proposals, or supported each other on our community platforms.
   author:
     name: Rémi Verschelde
