@@ -14,12 +14,12 @@ new_theme:
 
   read_more: https://github.com/godotengine/godot/pull/111118
   contributors:
-  - name: Passivestar
+  - name: passivestar
     link: https://github.com/passivestar
   - name: Michael Alexsander
     link: https://github.com/YeldhamDev
   media_author:
-    name: Passivestar
+    name: passivestar
     link: https://github.com/passivestar
   media: new_theme.webp
 
@@ -36,8 +36,8 @@ jolt_default:
   contributors:
   - name: Mikael Hermansson
     link: https://github.com/mihe
-  - name: Hugo Locurcio
-    link: https://github.com/Calinou
+  - name: Jorrit Rouwe
+    link: https://github.com/jrouwe
   media_author:
     name: Tibo
     link: https://gotibo.fr/
@@ -52,7 +52,7 @@ new_ik:
 
     Whether you need a character's feet to plant on uneven terrain or a robot arm to reach for objects, the framework to achieve this is right at your fingertips with a full suite of modifiers and constraints.
 
-    We're introducing the core `IKModifier3D` class built on the revamped SkeletonModifier3D. It comes with a family of deterministic solvers including **TwoBoneIK3D**, **SplineIK3D**, and iterative solvers like **FABRIK3D, CCDIK3D, and JacobianIK3D**.
+    We're introducing the core `IKModifier3D` class built on the revamped SkeletonModifier3D. It comes with a family of deterministic solvers including **TwoBoneIK3D**, **SplineIK3D**, and iterative solvers like **FABRIK3D**, **CCDIK3D**, and **JacobianIK3D**.
 
     You'll also find new constraints to control the twist and angular velocity of joints, which helps prevent excessive and unwanted motion.
 
@@ -80,11 +80,11 @@ dock_system:
     It's a significant step toward a full workspace system, allowing you to arrange the editor in a way that makes sense for your workflow.
 
     <span class="note">Note that not all docks support both horizontal and vertical layouts just yet, but they're movable!</span>
-  read_more: https://github.com/godotengine/godot/issues?q=is%3Apr%20state%3Amerged%20108647%20106503%20-106263
+  read_more: https://github.com/godotengine/godot-proposals/issues/12430
   contributors:
   - name: Tomasz Chabora
     link: https://github.com/KoBeWi
-  - name: Lodetrick
+  - name: lodetrick
     link: https://github.com/lodetrick
   media_author:
     name: Tibo
@@ -107,7 +107,7 @@ new_ssr:
   - name: Skyth
     link: https://github.com/blueskythlikesclouds
   media_author:
-    name: Passivestar
+    name: passivestar
     link: https://github.com/passivestar
   poster: new_ssr.webp
   media: new_ssr.webm
@@ -124,7 +124,7 @@ highlights_conclusion:
 
     With Godot 4.6, you can mostly expect a small and varied collection of things you couldn't do before that you can do now.
 
-  read_more: https://gdquest.com/library/godot_4_6_workflow_changes#the-godot-editor
+  read_more: https://gdquest.com/library/godot_4_6_workflow_changes/
   media_author:
     name: GDQuest
     link: https://gdquest.com/
@@ -133,9 +133,11 @@ highlights_conclusion:
 
 # General
 
+# Core
+
 unique_node_ids:
   title: A node *will* remember...
-  subtitle: Introducing unique node IDs
+  subtitle: Introducing unique Node IDs
   text: |
     Nodes now have a unique internal ID, allowing the engine to track them reliably even when scenes are reorganized or refactored.
 
@@ -146,6 +148,8 @@ unique_node_ids:
     With unique Node IDs, Godot tracks and preserves the connections making refactoring safer and less error-prone. This means you can restructure your scene tree freely without worrying about ending up with invalid references or unexpected behaviors.
 
     For Godot, this seemingly small improvement marks a turning point in robustness at scale and opens the door to bigger, more complex game projects!
+
+    <span class="note">Unique Node IDs are saved and referenced in scene files, so to benefit from this change, you should ensure that all your scenes are re-saved in 4.6. You can do so via Project > Tools > Upgrade Project Files.</span>
 
   read_more: https://github.com/godotengine/godot/pull/106837
   contributors:
@@ -168,6 +172,29 @@ libgodot:
       link: https://github.com/konczg
     - name: Ben Rog-Wilhelm
       link: https://github.com/zorbathut
+
+tracing_profilers:
+  title: Go all Dick Tracy
+  subtitle: C++ tracing profilers
+  text: |
+    Ever wonder which of your GDScript functions is costing you in performance, or which calls to Godot APIs are hogging your frame time? Godot 4.6 now lets you profile your scripts using dedicated tracing profilers like Tracy, Perfetto, and Instruments. These tools give you more detailed insights than the built-in profiler, letting you pinpoint bottlenecks, debug lag spikes, and optimize with confidence.
+
+    Here are [instructions](https://docs.godotengine.org/en/4.6/engine_details/development/profiling/index.html) to start taking advantage of these powerful profilers!
+
+  read_more: https://github.com/godotengine/godot/pull/113279
+  contributors:
+    - name: Lukas Tenbrink
+      link: https://github.com/Ivorforce
+    - name: Samuel Nicholas
+      link: https://github.com/enetheru
+    - name:  Stuart Carnie
+      link: https://github.com/stuartcarnie
+  media_author:
+    name: Lukas Tenbrink
+    link: https://github.com/Ivorforce
+  media: tracy_profiler.webp
+
+# Documentation
 
 private_signals:
   title: Getting mixed signals
@@ -319,7 +346,7 @@ ui_margin:
 # Editor
 
 hover_tabbar:
-  title: Drag, hover n' drop
+  title: Drag, hover 'n' drop
   subtitle: Switch tabs on hover while dragging
   text: |
     No more clicking to switch tabs and views before you drag and drop something. You can now just drag your resource and hover the destination tab to switch to it and drop your resource where it goes!
@@ -364,7 +391,7 @@ error_click:
 
     You can now pop up the offending script or resource by clicking on it inside the error or warning message directly in the Output panel. What's more, if you use an external editor, you can configure Godot to open the offending script directly there!
 
-  read_more: https://github.com/godotengine/godot/pulls?q=is%3Apr+108473+or+111805
+  read_more: https://github.com/godotengine/godot/pulls?q=is%3Apr+108473+111805
   contributors:
     - name: Tomasz Chabora
       link: https://github.com/KoBeWi
@@ -402,7 +429,7 @@ editor_enhancements:
 
     - When testing your game in the editor, new controls let you slow down or speed up the game while it's running, making it easier to inspect physics behavior or fine-tune gameplay without extra debug code.
 
-    - The array inspector got a mini-facelift.
+    - The array inspector got a mini-facelift; no more ever-shrinking working space for deeply nested resources.
 
     - The Inspector now shows a dedicated icon for resources that are referenced elsewhere (linked-resources), helping you understand dependencies at a glance.
 
@@ -418,22 +445,24 @@ editor_enhancements:
 
     All these little editor tweaks add up to help you stay focused on building your game rather than fighting the UI and losing steam.
 
-  read_more: https://github.com/godotengine/godot/pulls?q=is%3Apr+106341+or+107273+or+109458+or+108079+or+112174+or+82212+or+112729+or+112187+or+108342+or+103257
+  read_more: https://github.com/godotengine/godot/pulls?q=is%3Apr+106341+107273+109458+108079+112174+82212+112729+112187+108342+103257+
   contributors:
     - name: Tomasz Chabora
       link: https://github.com/KoBeWi
     - name: Haoyu Qiu
       link: https://github.com/timothyqiu
-    - name: Kleonc
+    - name: kleonc
       link: https://github.com/kleonc
     - name: SatLess
       link: https://github.com/SatLess
-    - name: Arkology
+    - name: arkology
       link: https://github.com/arkology
     - name: Dexter
       link: https://github.com/DexterFstone
-    - name: Fkeyz
+    - name: fkeyz
       link: https://github.com/fkeyzuwu
+    - name: Koliur Rahman
+      name: https://github.com/dugramen
 
 # System
 
@@ -449,7 +478,7 @@ animation_editor_goodies:
 
     These handy icons mean you can now quickly hide, lock, or remove everything associated with a node’s tracks without hunting through menus.
 
-  read_more: https://github.com/godotengine/godot/pulls?q=is%3Apr+is+110866+or+110623
+  read_more: https://github.com/godotengine/godot/pulls?q=is%3Apr+is+110866+110623
   contributors:
     - name: Mikael Hermansson
       link: https://github.com/mihe
@@ -512,7 +541,7 @@ controllers_led:
 
     Upcoming releases will allow you to fully leverage the capabilities of modern controllers to set up a richer gaming experience in your projects.
 
-  read_more: https://github.com/godotengine/godot/pulls?q=is%3Apr+111681+or+111707
+  read_more: https://github.com/godotengine/godot/pulls?q=is%3Apr+111681+111707
   contributors:
     - name: Nintorch
       link: https://github.com/Nintorch
@@ -608,12 +637,12 @@ radiance_reflection_probes_improvement:
 
   read_more: https://github.com/godotengine/godot/pull/107902
   contributors:
-    - name: DarioSamo
+    - name: Darío
       link: https://github.com/DarioSamo
     - name: Clay John
       link: https://github.com/clayjohn
   media_author:
-    name: DarioSamo
+    name: Darío
     link: https://github.com/DarioSamo
   compare:
     before_image: radiance_reflection_probes_before.webp
@@ -631,7 +660,7 @@ mobile_3d_upgrade:
 
     Combined with all the optimizations unique to the Mobile renderer, these changes make it an excellent choice for high-performance 3D games on both mobile and desktop platforms.
 
-  read_more: https://github.com/godotengine/godot/pulls?q=is%3Apr+109084+or+109971+
+  read_more: https://github.com/godotengine/godot/pulls?q=is%3Apr+109084+109971+
   contributors:
     - name: Hugo Locurcio
       link: https://github.com/Calinou
@@ -654,9 +683,9 @@ mobile_gpu_crash_fixes:
   text: |
     Godot is a general-purpose engine used by a wide variety of people, on a wide variety of devices, with a wide variety of graphics drivers, and not all of them work gracefully. Ensuring stability across the board is a constant effort, and this release makes big strides.
 
-    Thanks to developers of games like Rift Riff and Kamaeru sharing detailed crash logs from Google Play, we tracked down and fixed a series of crashes affecting devices with certain Mali and Adreno mobile GPUs. If you've been seeing unexplained crashes on Android with the Mobile renderer, this release should bring relief to you and your players.
+    Thanks to developers of games like Rift Riff and Kamaeru sharing detailed crash logs from Google Play and giving us access to their projects, we tracked down and fixed a series of crashes affecting devices with certain Mali and Adreno mobile GPUs. If you've been seeing unexplained crashes on Android with the Mobile renderer, this release should bring relief to you and your players.
 
-  read_more: https://github.com/godotengine/godot/pulls?q=is%3Apr+114476+or+114313+
+  read_more: https://github.com/godotengine/godot/pulls?q=is%3Apr+114476+114313+
   contributors:
     - name: Skyth
       link: https://github.com/blueskythlikesclouds
@@ -673,28 +702,28 @@ csv_translation_improvement:
   text: |
     Spreadsheet-based localization has just leveled up, making CSV files more adapted to real game translation workflows.
 
-    You can now include optional `?context` columns to pass meaningful context for translators (so the same key can mean different things in different places), and `?plural` columns to define plural forms directly in your CSVs, including plural rules for languages with complex plural logic.
+    You can now include optional `?context` columns to pass meaningful context for translators (so the same key can mean different things in different places), and `?plural` columns to define plural forms directly in your CSVs, including rules for languages with complex plural logic.
 
     In addition, Godot now lets you **generate CSV translation templates,** giving you a good starting point for translators and making it easier to maintain consistent, exportable localization tables across languages and projects.
 
-  read_more: https://github.com/godotengine/godot/pulls?q=is%3Apr+112073+or+112149+
+  read_more: https://github.com/godotengine/godot/pulls?q=is%3Apr+112073+112149+
   contributors:
     - name: Haoyu Qiu
       link: https://github.com/timothyqiu
-    - name: Bruvzg
+    - name: bruvzg
       link: https://github.com/bruvzg
 
 csharp_translation_parser_support:
   title: Bonjour, C#
-  subtitle: C# Translation Parser Support
+  subtitle: C# translation parser support
   text: |
-    C# translation calls are now parsed just like GDScript, so localized text is collected automatically during pot/csv exports.
+    C# translation calls are now parsed just like GDScript, so localized text is collected automatically during POT/CSV exports.
 
     This means strings inside `Tr(string)` and `TrN(string)` in C# will now be picked up automatically when generating translation files, so you don’t have to manually extract or manage them yourself. It closes a longstanding gap in localization workflows.
 
   read_more: https://github.com/godotengine/godot/pull/99195
   contributors:
-    - name: Shitake2333
+    - name: shitake2333
       link: https://github.com/shitake2333
 
 
@@ -702,7 +731,7 @@ csharp_translation_parser_support:
 
 openxr_support:
   title: Hello OpenXR 1.1
-  subtitle: Native OpenXR 1.1 Support
+  subtitle: Native OpenXR 1.1 support
   text: |
     The days of OpenXR 1.1 are upon us. Godot 4.6 will now automatically enable OpenXR 1.1 features on headsets and runtimes that support it. While largely a maintenance release, OpenXR 1.1 guarantees support for previously optional features, most notably the **surface grip pose** for reliable virtual hand positioning when hand joint tracking isn't available. It also standardizes interaction profiles for VR controllers, letting you distinguish between specific controller models.
 
@@ -755,6 +784,8 @@ android_gradle:
   contributors:
     - name: David Snopek
       link: https://github.com/dsnopek
+    - name: Logan Lang
+      link: https://github.com/devloglogan
   media: android_gradle.webp
 
 storage_access_framework:
@@ -778,16 +809,16 @@ scrcpy_support:
   title: Coming to a big screen near you
   subtitle: Scrcpy runs exports in the editor
   text: |
-    When exporting to Android, you can now enable an option to automatically run your exported game or app through scrcpy. This mirrors your connected phone or tablet onto your computer screen while the game runs on the device itself.
+    When exporting to Android, you can now enable an option to automatically run your exported game or app through `scrcpy`. This mirrors your connected phone or tablet onto your computer screen while the game runs on the device itself.
 
     Instead of picking up your phone every time you test a change, you can stay focused where you're creating and interact with the game directly from your workstation, making it easier to test on real hardware and faster to iterate. You can even test different screen sizes and run multiple apps on the same device!
 
   read_more: https://github.com/godotengine/godot/pull/108737
   contributors:
-    - name: Bruvzg
+    - name: bruvzg
       link: https://github.com/bruvzg
   media_author:
-    name: Bruvzg
+    name: bruvzg
     link: https://github.com/bruvzg
   poster: scrcpy_support.webp
   media: scrcpy_support.webm
@@ -804,7 +835,7 @@ render_parity:
   contributors:
     - name: Pedro J. Estébanez
       link: https://github.com/RandomShaper
-    - name: DarioSamo
+    - name: Darío
       link: https://github.com/DarioSamo
     - name: Skyth
       link: https://github.com/blueskythlikesclouds
@@ -854,9 +885,11 @@ json_gdextension:
   title: JSON's here!
   subtitle: JSON-based GDExtension interface
   text: |
-    This one is mostly under the hood but to many of you it will come as a great relief and open new possibilities. As of this release, GDExtension's interface, the bridge between Godot and native code, is now stored in JSON instead of a C header.
+    This one is mostly under the hood but to many of you it will come as a great relief and open new possibilities. As of this release, GDExtension's interface, the bridge between Godot and native code, is now defined in JSON instead of a C header.
 
     This makes it much easier for tools, scripts, and language bindings to read, analyze, and work with the API automatically. This long-awaited upgrade lays the foundation for faster automation, improved bindings, and smoother integration, unlocking possibilities that weren’t practical before.
+
+    <span class="note">The C header is of course still available, but it is now generated from the JSON definition.</span>
 
   read_more: https://github.com/godotengine/godot/pull/107845
   contributors:
@@ -876,7 +909,7 @@ step_out_button:
 
   read_more: https://github.com/godotengine/godot/pull/97758
   contributors:
-    - name: TsFreddie
+    - name: Freddie W
       link: https://github.com/TsFreddie
   media: step_out_button.webp
 
@@ -894,7 +927,7 @@ string_placeholder_highlighting:
 
 bbcode_to_markdown:
   title: It's written in **BOLD**
-  subtitle: 'GDScript LSP: Improved BBCode to Markdown Conversion'
+  subtitle: 'GDScript LSP: Improved BBCode to Markdown conversion'
   text: |
     Now when your comments include formatting like bold, code blocks, and structured text, they render more clearly in editors and IDEs that support Markdown.
 
@@ -907,24 +940,3 @@ bbcode_to_markdown:
     - name: HolonProduction
       link: https://github.com/HolonProduction
   media: bbcode_to_markdown.webp
-
-tracy_profiler:
-  title: Go all Dick Tracy
-  subtitle: GDScript tracing profilers
-  text: |
-    Ever wonder which of your GDScript functions is costing you in performance? Godot 4.6 now lets you profile your scripts using dedicated tracing profilers like Tracy, Perfetto, and Instruments. These tools give you more detailed insights than the built-in profiler, letting you pinpoint bottlenecks, debug lag spikes, and optimize with confidence.
-    
-    Here are [instructions](https://docs.godotengine.org/en/latest/engine_details/development/debugging/profiling/tracing_profilers.html) to start taking advantage of these powerful profilers!
-
-  read_more: https://github.com/godotengine/godot/pull/113279
-  contributors:
-    - name: Lukas Tenbrink
-      link: https://github.com/Ivorforce
-    - name: Samuel Nicholas
-      link: https://github.com/enetheru
-    - name:  Stuart Carnie 
-      link: https://github.com/stuartcarnie
-  media_author:
-    name: Lukas Tenbrink
-    link: https://github.com/Ivorforce
-  media: tracy_profiler.webp
