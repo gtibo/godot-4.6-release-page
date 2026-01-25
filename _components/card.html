@@ -5,8 +5,8 @@
         {% include_relative _components/media.html item=item %}
     {% endif %}
     <div class="content">
-        <h3 class="title">{{item.title}}</h3>
-        <h4 class="subtitle">{{item.subtitle}}</h4>
+        <h3 class="title">{{item.title | markdownify}}</h3>
+        <h4 class="subtitle">{{item.subtitle | markdownify}}</h4>
         <div class="body">{{item.text | markdownify}}</div>
 
         <div class="flex flex-wrap gap-m">
