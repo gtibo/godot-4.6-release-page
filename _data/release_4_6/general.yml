@@ -12,24 +12,28 @@ conclusion:
 
 end_message:
   text: |
-    Yet another gargantuan release, totalling nearly 2,500 commits (excluding merge commits)!
-    Our focus on integrating accessibility options really shines through this release, with the express intent of creating an environment and experience that anyone can wield to the fullest. We'd like to thank the team behind the AccessKit project, and everyone else who helped integrate their systems and others like it.
-    More than 400 contributors were involved in this new feature release, and we want to thank them all for their amazing contributions, as well as all users who sponsor the Development Fund, reported bugs, opened proposals, or supported each other on our community platforms.
+    Almost 3 years after the 4.0 release, Godot 4 is starting to be a mature engine, including a wide array of features that enable countless developers to publish games in all genres. For example, Steam got over [1,200 new Godot games](https://steamdb.info/stats/releases/?tech=Engine.Godot) in 2025, while itch.io consistently gets around [500 new Godot games per week](https://itch.io/game-development/engines/most-projects) (game jams, prototypes, etc.).
+    
+    While every Godot user still has their own favorite missing feature which they're eagerly awaiting, for the most part the engine is fully capable. But there are still so many minor roadblocks, papercuts, workflow issues or outright bugs which can make the experience of developing and publishing games more painful than we'd like.
+    
+    So for this release, there was a significant focus on polish and usability, aiming to firmly establish Godot as an engine that you can rely upon, while keeping the iteration speed, lightweightness, and flexibility which make users love it.
+    
+    Close to 400 contributors were involved in this new feature release, authoring 2,001 (!) commits, and we want to thank them all for their amazing contributions, as well as all users who sponsor the Development Fund, reported bugs, opened proposals, or supported each other on our community platforms.
   author:
-    name: Thaddeus Crews
-    role: Release Manager
-    link: https://github.com/Repiteo
-  
+    name: Rémi Verschelde
+    role: Project Maintainer
+    link: https://github.com/akien-mga
+
 credits:
   title: Release page credits
   list:
     - text: Texts and revisions
-      by: '[Gdquest team](https://www.gdquest.com/)'
+      by: '[GDQuest team](https://www.gdquest.com/)'
     - text: Page design and integration
       by: '[Thibaud Goiffon](https://gotibo.fr/)'
     - text: Page revision
       by: '[Emilio Coppola](https://coppolaemilio.com/), [Rémi Verschelde](https://github.com/akien-mga/)'
     - text: Additional fixes and contributions
-      by: '[Allen Pestaluky](https://github.com/allenwp), [Passivestar](https://github.com/passivestar), [RespiteFromReality](https://github.com/RespiteFromReality), [Malcolm Anderson](https://github.com/Meorge), [Anish Kumar](https://github.com/syntaxerror247), [David Snopek](https://github.com/dsnopek), [Lukas Tenbrink](https://github.com/Ivorforce), [Mikael Hermansson](https://github.com/mihe), [Xananax](https://github.com/Xananax), [Nathan Lovato](https://github.com/NathanLovato), [hakro](https://github.com/hakro), [Nintorch](https://github.com/Nintorch)'
+      by: '[Allen Pestaluky](https://github.com/allenwp), [passivestar](https://github.com/passivestar), [RespiteFromReality](https://github.com/RespiteFromReality), [Malcolm Anderson](https://github.com/Meorge), [Anish Kumar](https://github.com/syntaxerror247), [David Snopek](https://github.com/dsnopek), [Lukas Tenbrink](https://github.com/Ivorforce), [Mikael Hermansson](https://github.com/mihe), [Xananax](https://github.com/Xananax), [Nathan Lovato](https://github.com/NathanLovato), [hakro](https://github.com/hakro), [Nintorch](https://github.com/Nintorch)'
     - text: Additional media content
       by: Tagged content creators
