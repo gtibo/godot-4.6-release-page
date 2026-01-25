@@ -227,12 +227,6 @@ body {
   }
 }
 
-@media (min-width: 1400px) {
-  .section-body{
-    max-width: min(100%, 1400px);
-  }
-}
-
 @media (min-width: 620px) {
   #toc-nav{
     left: 2em;
@@ -247,7 +241,7 @@ body {
       margin-top: 0;
       max-width: 1400px;
       align-items: start;
-      font-size: 2.0em;
+      font-size: 1.2em;
     }
     .btn{
       font-size: 1.0em;
@@ -260,7 +254,6 @@ body {
 
 }
 
-
 @media (max-width: 1920px) {
   .section-body{
     padding: 0 1em;
@@ -269,6 +262,11 @@ body {
 }
 
 @media (min-width: 1200px) {
+  .hero{
+    .content{
+      font-size: 1.4em;
+    }
+  }
   body{
     font-size: 0.9em;
   }
@@ -313,5 +311,16 @@ body {
     .subtitle{
       font-size: 1.6rem;
     }
+  }
+}
+
+@media (min-width: 1400px) {
+  .hero{
+    .content{
+      font-size: 1.6em;
+    }
+  }
+  .section-body{
+    max-width: min(100%, 1400px);
   }
 }

@@ -21,14 +21,6 @@
     max-width: 65ch;
     text-align: center;
   }
-  img{
-    position: absolute;
-    top: 80%;
-    left: 15%;
-    transform: translate(-50%, -50%);
-    height: 150%;
-    width: auto;
-  }
 }
 
 .section-body{
