@@ -851,7 +851,7 @@ mesh_to_collision_shape:
   text: |
     So far, to get a collision shape from a primitive mesh, you had to manually choose a shape type and align it by hand. Literally a drag... But no more.
 
-    Starting Godot 4.6, whenever your mesh is a simple geometric shape like a box, sphere, cylinder, capsule, or another supported primitive shape, you can now automatically generate a matching CollisionShape3D. One more quality-of-life boost!
+    Starting Godot 4.6, whenever your mesh is a simple geometric shape like a box, sphere, cylinder, or capsule, you can now automatically generate a matching CollisionShape3D from the Mesh menu. One more quality-of-life boost!
 
   read_more: https://github.com/godotengine/godot/pull/101521
   contributors:
