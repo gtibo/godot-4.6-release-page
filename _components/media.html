@@ -12,7 +12,7 @@
     {%if video_exts contains media_ext %}
         <video
         poster="{{ site.baseurl }}/storage/releases/4.6/images/{{item.poster}}"
-        src="{{ site.baseurl }}/storage/releases/4.6/images/{{item.media}}" muted loop preload="none"></video>
+        src="{{ site.baseurl }}/storage/releases/4.6/images/{{item.media}}" muted loop playsinline preload="none"></video>
         <div class="video-tag">
             <svg class="icon" name="play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                 <path d="M3 3.732a1.5 1.5 0 0 1 2.305-1.265l6.706 4.267a1.5 1.5 0 0 1 0 2.531l-6.706 4.268A1.5 1.5 0 0 1 3 12.267V3.732Z" />
