@@ -1,6 +1,6 @@
 introduction:
   text: |
-    With the stability gained over the past five releases, the engine has matured enough to enter a new development phase. Godot 4.6 kicks off a period of polish, quality-of-life improvements, tighter integration of industry-standards, and doubled-down effort on performance optimization.
+    With the stability gained over the past five Godot 4 releases, the engine has matured enough to enter a new development phase. Godot 4.6 kicks off a period of polish, quality-of-life improvements, tighter integration of industry standards, and doubled-down effort on performance optimization.
 
     The result: a release that puts you and your workflow first. The new editor theme lets your projects take center stage, while dozens of improvements across the board reduce friction and speed up everyday development. Every aspect, from loading assets to editing, debugging, exporting, and testing, has received some love to keep you focused on creating and minimize the time you spend wrestling with UI, or fiddling with external tools and plugins.
 
@@ -12,7 +12,7 @@ conclusion:
 
 end_message:
   text: |
-    Almost 3 years after the 4.0 release, Godot 4 is starting to be a mature engine, including a wide array of features that enable countless developers to publish games in all genres. For example, Steam got over [1,200 new Godot games](https://steamdb.info/stats/releases/?tech=Engine.Godot) in 2025, while itch.io consistently gets around [500 new Godot games per week](https://itch.io/game-development/engines/most-projects) (game jams, prototypes, etc.).
+    Almost 3 years after the 4.0 release, Godot 4 is starting to be a mature engine, including a wide array of features that enable countless developers to publish games in all genres. For example, Steam got over [1,200 new Godot games](https://steamdb.info/stats/releases/?tech=Engine.Godot) in 2025, while itch.io consistently gets around [500 new Godot games per week](https://itch.io/game-development/engines/most-projects) (including game jams, prototypes, etc.).
     
     While every Godot user still has their own favorite missing feature which they're eagerly awaiting, for the most part the engine is fully capable. But there are still so many minor roadblocks, papercuts, workflow issues or outright bugs which can make the experience of developing and publishing games more painful than we'd like.
     

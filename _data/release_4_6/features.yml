@@ -2,9 +2,9 @@ new_theme:
   title: Fresh look, fresh focus
   subtitle: 'New editor theme: “Modern”'
   text: |
-    Since its launch last year, "Godot Minimal Theme" has quickly become a fan-favorite with its clean lines, reduced clutter, and contemporary feel. It was time to integrate it and make it official!
+    Since its launch last year, "Godot Minimal Theme" has quickly become a fan favorite with its clean lines, reduced clutter, and contemporary feel. It was time to integrate it and make it official!
 
-    You can now choose between the older "Classic" theme and the newer "Modern" theme with Godot 4.6 shipping out with the "Modern" theme by default.
+    You can now choose between the older "Classic" theme and the newer "Modern" theme, with the "Modern" theme enabled by default in Godot 4.6.
 
     The new theme, which will continue to mature with user feedback, brings you subtle contrast adjustments and improved readability and spacing between UI elements. Many testers have found it helps reduce competition on focus and gives center-stage to the viewport where your game lives.
 
@@ -52,13 +52,13 @@ new_ik:
 
     Whether you need a character's feet to plant on uneven terrain or a robot arm to reach for objects, the framework to achieve this is right at your fingertips with a full suite of modifiers and constraints.
 
-    We're introducing the core `IKModifier3D` class built on the revamped SkeletonModifier3D. It comes with a family of deterministic solvers including **TwoBoneIK3D**, **SplineIK3D**, and iterative solvers like **FABRIK3D**, **CCDIK3D**, and **JacobianIK3D**.
+    We're introducing the core **IKModifier3D** class built on the revamped **SkeletonModifier3D**. It comes with a family of deterministic solvers including **TwoBoneIK3D**, **SplineIK3D**, and iterative solvers like **FABRIK3D**, **CCDIK3D**, and **JacobianIK3D**.
 
     You'll also find new constraints to control the twist and angular velocity of joints, which helps prevent excessive and unwanted motion.
 
     What's more, you can set the target of animation constraints to 3D nodes to make, for example, the arm of a character extend and snap to a weapon.
 
-    The modular approach of this new framework lets you combine IK with other modifiers and constraints to fine-tune your procedural animations directly in the engine and documentation is in the works to help you make the best of the framework depending on your use case.
+    The modular approach of this new framework lets you combine IK with other modifiers and constraints to fine-tune your procedural animations directly in the engine. Documentation is in the works to help you make the best of the framework depending on your use case.
   read_more: https://godotengine.org/article/inverse-kinematics-returns-to-godot-4-6/
   contributors:
   - name: Tokage
@@ -94,11 +94,11 @@ dock_system:
 
 new_ssr:
   title: Reflections got real
-  subtitle: Major SSR Overhaul
+  subtitle: Major SSR overhaul
   text: |
-    If your 3D game environment includes reflective materials like metal, water and glass, things are about to get exciting for you.
+    If your 3D game environment includes reflective materials like metal, water, and glass, things are about to get exciting for you.
 
-    Screen Space Reflection (SSR) has been completely overhauled in this version, giving you a significant leap in realism, visual stability and performance. Not only will your reflective surfaces look more realistic with better handling of roughness, but the effect will run faster too!
+    Screen Space Reflection (SSR) has been completely overhauled in this version, giving you a significant leap in realism, visual stability, and performance. Not only will your reflective surfaces look more realistic with better handling of roughness, but the effect will run faster too!
 
     To further optimize, you can choose between full-resolution mode for maximum quality, or half-resolution mode for higher performance. Even with reflections calculated at half your viewport size, the new SSR allows you to preserve decent quality. Check it out!
 
@@ -200,7 +200,7 @@ tracing_profilers:
 
 private_signals:
   title: Getting mixed signals
-  subtitle: Hidden underscored Signals
+  subtitle: Hidden underscored signals
   text: |
     Signals starting with an underscore are now hidden from auto-completion and generated documentation, becoming more in line with other underscored methods and properties. This makes it easier to focus on the signals that are meant for public use, reducing confusion when scripting.
 
@@ -218,7 +218,7 @@ rotate_2d_tile:
   text: |
     Everybody knows to rotate a tile when a tile needs rotating. Thus far in Godot, only one type of tile stood out, breaking your flow and eluding your rotational aspirations: the infamous scene tile. But no more.
 
-    Starting this version, when you place a scene instance on a grid cell in your tile map, such as: an animated chest, a glowing lamp or a torch, you can rotate the scene tile by 90-degree increments and that's that!
+    Starting with Godot 4.6, when you place a scene instance on a grid cell in your tile map, such as an animated chest, a glowing lamp, or a torch, you can rotate the scene tile in 90-degree increments and that's that!
 
   read_more: https://github.com/godotengine/godot/pull/108010
   contributors:
@@ -369,10 +369,10 @@ resource_preview:
   title: Check it out now
   subtitle: Live previews in the Quick Open dialog
   text: |
-    Remember those painful iterations every time you needed to select a texture, material, or other resource in the Quick Open dialog: Guess which resource would look right, select it, close the dialog, observe the result, rinse and repeat?
+    Remember those painful iterations every time you needed to select a texture, material, or other resource in the Quick Open dialog: guess which resource would look right, select it, close the dialog, observe the result, rinse and repeat?
     Those days are over too!
 
-    Starting Godot 4.6, as you move through the list, the selected resource is previewed instantly in your scene. You can quickly compare options, see the result in context, and commit only when it looks right, no extra clicks, no back-and-forth.
+    Starting with Godot 4.6, as you move through the list, the selected resource is previewed instantly in your scene. You can quickly compare options, see the result in context, and commit only when it looks right, no extra clicks, no back-and-forth.
 
   read_more: https://github.com/godotengine/godot/pull/106947
   contributors:
@@ -385,10 +385,10 @@ resource_preview:
   poster: resource_preview.webp
 
 error_click:
-  title: Error, Error on the wall...
+  title: Error, error on the wall...
   subtitle: Clickable files in the Output panel
   text: |
-    When it's time to squash bugs, one of the things that grind you down as a dev is having to manually search for the culprit, dig out the file, scroll to the right line, and only then start fixing.
+    When it's time to squash bugs, one thing that grinds you down as a dev is having to manually search for the culprit, dig out the file, scroll to the right line, and only then start fixing.
     But no more! Godot 4.6 brings two quality-of-life improvements to your bug hunting endeavors.
 
     You can now pop up the offending script or resource by clicking on it inside the error or warning message directly in the Output panel. What's more, if you use an external editor, you can configure Godot to open the offending script directly there!
@@ -443,7 +443,7 @@ editor_enhancements:
 
     - When resources go missing due to file moves or renames, the editor now lets you resolve indirect missing dependencies manually instead of being stuck.
 
-    - Newly created scripts now open automatically, letting you start coding immediately without extra clicks.
+    - Newly-created scripts now open automatically, letting you start coding immediately without extra clicks.
 
     All these little editor tweaks add up to help you stay focused on building your game rather than fighting the UI and losing steam.
 
@@ -470,7 +470,7 @@ editor_enhancements:
 
 animation_editor_goodies:
   title: Animation editor goodies
-  subtitle: Timeline control & quick action buttons
+  subtitle: Timeline control and quick action buttons
   text: |
     Tweaking and polishing your animations just got more pleasant in Godot’s Animation Editor.
 
@@ -502,7 +502,7 @@ patch_pcks:
   text: |
     Frequent updaters, this is a game changer for you (pun intended). Your exported patches just got leaner and faster.
 
-    Godot 4.6 improves patch PCKs by supporting delta encoding, allowing patch files to include only the parts of resources that actually changed instead of entire files. This can dramatically reduce the size of patches, especially for projects and games with large assets or frequent small updates (for example: if you're localizing your project and adding languages!).
+    Godot 4.6 improves patch PCKs by supporting delta encoding, allowing patch files to include only the parts of resources that actually changed instead of entire files. This can dramatically reduce the size of patches, especially for projects and games with large assets or frequent small updates (for example: if you're localizing your project and adding languages).
 
     For players, this means faster downloads and updates. For developers, it makes distributing incremental patches more practical and bandwidth-friendly.
 
@@ -539,7 +539,7 @@ controllers_led:
   text: |
     You can now customize the LED light colors on supported controllers, but this is only the beginning! Godot 4.6 lays the foundation for advanced joypad features support.
 
-    Starting this release, the door is wide open for the integration of motion sensors, touchpads, haptic feedback, adaptive triggers, and controller information queries like controller type, button layout, connection method, and battery state.
+    Starting with Godot 4.6, the door is wide open for the integration of motion sensors, touchpads, haptic feedback, adaptive triggers, and controller information queries like controller type, button layout, connection method, and battery state.
 
     Upcoming releases will allow you to fully leverage the capabilities of modern controllers to set up a richer gaming experience in your projects.
 
@@ -576,9 +576,9 @@ faster_textures:
   title: 'Faster than you can say: Texture'
   subtitle: 'Betsy: Convert RGB to RGBA on the GPU'
   text: |
-    Textures in Godot are compressed by default to make your game smaller on disk and more efficient in memory, often reducing size by 4-6×.
+    Textures in Godot are compressed by default to make your game smaller on disk and more efficient in memory, often reducing size by four to six times.
 
-    Starting with Godot 4.6, 3D textures compressed this way now import up to 2× faster, so you spend less time waiting when importing assets and more time building your world. This was accomplished by changing the way Betsy handles RGB textures to instead convert them to RGBA on the GPU and use them directly.
+    Starting with Godot 4.6, 3D textures compressed this way now import up to two times faster, so you spend less time waiting when importing assets and more time building your world. This was accomplished by changing the way Betsy handles RGB textures to instead convert them to RGBA on the GPU and use them directly.
 
   read_more: https://github.com/godotengine/godot/pull/110060
   contributors:
@@ -595,7 +595,7 @@ agx_parameters:
   title: Tone it down
   subtitle: Configurable AgX tonemapper parameters
   text: |
-    AgX tonemapper now exposes **`agx_white` and `agx_contrast`**, letting you control how bright and contrasted your scenes appear and allowing you to achieve a more consistent hue on bright colors even at high contrast.
+    The AgX tonemapper now exposes **`agx_white` and `agx_contrast`**, letting you control how bright and contrasted your scenes appear and allowing you to achieve a more consistent hue on bright colors even at high contrast.
 
     Previously, these values were fixed, giving you limited flexibility when adjusting dynamic range. While this change lays the foundation for future HDR support, the new curves don't break compatibility with 4.4 and 4.5!
 
@@ -700,7 +700,7 @@ mobile_gpu_crash_fixes:
 
 csv_translation_improvement:
   title: 1 fish, 2 fishes?
-  subtitle: Improved CSV translation support & template generation
+  subtitle: Improved CSV translation support and template generation
   text: |
     Spreadsheet-based localization has just leveled up, making CSV files more adapted to real game translation workflows.
 
@@ -794,9 +794,9 @@ storage_access_framework:
   title: Get *specific* consent
   subtitle: Storage Access Framework (SAF)
   text: |
-    Starting Godot 4.6 you can provide players with the possibility to load and save specific files using the system file picker, without asking for broad storage permissions.
+    Starting with Godot 4.6, you can provide players with the possibility to load and save specific files using the system file picker, without asking for broad storage permissions.
 
-    This makes it possible to support loading custom content (like levels!), importing data files, or exporting saves and presets, in a more granular manner, avoiding Play Store compliance issues and keeping players in control.
+    This makes it possible to support loading custom content (like levels), importing data files, or exporting saves and presets, in a more granular manner, avoiding Play Store compliance issues and keeping players in control.
 
   read_more: https://github.com/godotengine/godot/pull/112215
   contributors:
@@ -831,7 +831,7 @@ render_parity:
   title: Render parity
   subtitle: Direct3D 12 as the new default on Windows
   text: |
-    With Direct3D 12 now pretty much on par with Vulkan, new Windows projects default to Direct3D 12 for more stable driver support and fewer platform quirks. This improves cross-platform rendering consistency while keeping existing projects unchanged.
+    With Direct3D 12 now pretty much on par with Vulkan, new Windows projects default to Direct3D 12 for more stable driver support and fewer platform quirks. This improves cross-platform rendering consistency while keeping existing projects unchanged.
 
   read_more: https://github.com/godotengine/godot/pull/113213
   contributors:
@@ -849,9 +849,9 @@ mesh_to_collision_shape:
   title: Abracadabra, mesh to collision shape
   subtitle: Turn meshes into collision shapes
   text: |
-    So far, to get a collision shape from a primitive mesh, you had to manually choose a shape type and align it by hand. Literally a drag... But no more.
+    Until now, to get a collision shape from a primitive mesh, you had to manually choose a shape type and align it by hand. Literally a drag... But no more.
 
-    Starting Godot 4.6, whenever your mesh is a simple geometric shape like a box, sphere, cylinder, or capsule, you can now automatically generate a matching CollisionShape3D from the Mesh menu. One more quality-of-life boost!
+    Starting with Godot 4.6, whenever your mesh is a simple geometric shape like a box, sphere, cylinder, or capsule, you can now automatically generate a matching CollisionShape3D from the Mesh menu. One more quality-of-life boost!
 
   read_more: https://github.com/godotengine/godot/pull/101521
   contributors:
@@ -869,7 +869,7 @@ parameters_and_values_as_required:
   text: |
     This one's for you if you're already taking advantage of GDExtension to write high-performance game code and editor plugins in languages like C and C++, or [the community-supported Rust, Zig and more](https://github.com/Godot-Languages-Support/godot-lang-support/blob/main/README.md)!
 
-    Starting in Godot 4.6, parameters and return values in the Godot API can be declared as **required**, meaning nullable values are no longer implicitly allowed in those positions. This is especially helpful in languages with strict nullable/optional types like Rust, Swift, or Kotlin, because it helps you catch mistakes at compile time or fail clearly at runtime!
+    Starting with Godot 4.6, parameters and return values in the Godot API can be declared as **required**, meaning nullable values are no longer implicitly allowed in those positions. This is especially helpful in languages with strict nullable/optional types like Rust, Swift, or Kotlin, because it helps you catch mistakes at compile time or fail clearly at runtime!
 
     The result is safer, clearer APIs with better integration of modern type systems in your tooling.
 
@@ -903,9 +903,9 @@ json_gdextension:
 
 step_out_button:
   title: Get outta that function already
-  subtitle: 'Script Debugger: Step Out Control'
+  subtitle: 'Script debugger: Step Out button'
   text: |
-    If you've ever gotten stuck inside a function while debugging, wishing you could jump straight back to the caller, this small feature will surely improve your quality-of-life.
+    If you've ever gotten stuck inside a function while debugging, wishing you could jump straight back to the caller, this small feature will surely improve your quality of life.
 
     You now have a **Step Out** button alongside the existing Step Over and Step Into ones. It lets you leave the current function and continue execution at the point where it was called. No more manually stepping through lines or navigating the call stack when exploring complex logic or tracking elusive bugs.
 
@@ -917,7 +917,7 @@ step_out_button:
 
 string_placeholder_highlighting:
   title: I spy with my little eye
-  subtitle: String Placeholder Highlighting
+  subtitle: String placeholder highlighting
   text: |
     Godot 4.6 now highlights placeholders in your strings, so `%s`, `%d`, or `{name}` jump right off the page. You’ll no longer have to squint to spot missing or miswritten placeholders. This is sure to make string substitution or formatting more pleasant.
 
