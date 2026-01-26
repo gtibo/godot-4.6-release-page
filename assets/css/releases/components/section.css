@@ -8,6 +8,15 @@
   padding: 3.8em 2em;
   width: 100%;
   font-size: 1.2em;
+  .wrap{
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
   .title{
     font-size: 1.6em;
     text-transform: uppercase;
@@ -20,6 +29,24 @@
     margin-top: var(--m);
     max-width: 65ch;
     text-align: center;
+  }
+  img{
+    height: 12em;
+    margin-top: -6em;
+    margin-bottom: 0.6em;
+  }
+}
+
+@media (min-width: 1400px) {
+  .section-header{
+    img{
+      margin: 0;
+      position:absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      height: 150%;
+    }
   }
 }
 
