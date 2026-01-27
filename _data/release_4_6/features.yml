@@ -865,7 +865,7 @@ parameters_and_values_as_required:
   title: It's required if you say it is...
   subtitle: Mark object parameters and results as required
   text: |
-    This one's for you if you're already taking advantage of GDExtension to write high-performance game code and editor plugins in languages like C and C++, or [the community-supported Rust, Zig and more](https://github.com/Godot-Languages-Support/godot-lang-support/blob/main/README.md)!
+    This one's for you if you're already taking advantage of GDExtension to write high-performance game code and editor plugins in languages like C and C++, or [the community-supported Rust, Zig, and more](https://github.com/Godot-Languages-Support/godot-lang-support/blob/main/README.md)!
 
     Starting with Godot 4.6, parameters and return values in the Godot API can be declared as **required**, meaning nullable values are no longer implicitly allowed in those positions. This is especially helpful in languages with strict nullable/optional types like Rust, Swift, or Kotlin, because it helps you catch mistakes at compile time or fail clearly at runtime!
 
