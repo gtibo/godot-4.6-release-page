@@ -5,6 +5,7 @@
 
 .hero{
   background-color: rgba(0,0,0,0.4);
+  color: var(--main-text-color);
   position: relative;
   display: flex;
   flex-direction: column;

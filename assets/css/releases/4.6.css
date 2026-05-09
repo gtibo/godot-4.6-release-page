@@ -7,10 +7,25 @@
 @import "./components/gdquest.css";
 @import "./components/donation_card.css";
 
+/* TODO: Improve color names */
+
 :root {
+  color-scheme: light dark;
+
+  --dark-text-color: #FBFBFF;
+  --light-text-color: #09090a;
+
+  --dark-bg-color: #17191a;
+  --light-bg-color: #e8ebef;
+
+  --dark-card-bg-color: #25282B;
+  --light-card-bg-color: #fbfdff;
+
+
   --main-text-color: #FBFBFF;
   --main-bg-color: #17191a;
   --card-bg-color: #25282B;
+
   --accent-color: #1684D4;
   --accent-color-hover: #41A6F0;
   --blank-color: #282828;
@@ -19,6 +34,7 @@
   --color-godot-but-even-brighter: #5fbbff;
   --color-godot-but-darker: #7998af;
   --color-godot-but-desaturated: #a9d7f9;
+
   --font-family: 'SplineSans', 'Roboto', 'Arial', sans-serif;
   --xxs: 0.2em;
   --xs: 0.4em;
@@ -45,8 +61,8 @@ body {
   margin: 0;
   font-family: var(--font-family);
   min-height: 100%;
-  color: var(--main-text-color);
-  background-color: var(--main-bg-color);
+  color: light-dark(var(--light-text-color), var(--dark-text-color));
+  background-color: light-dark(var(--light-bg-color), var(--dark-bg-color));
   font-size: 0.8em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -68,7 +84,7 @@ body {
     background: linear-gradient(0deg, black 20%, #185FE7 80%);
   }
   &.red::after{
-    background: linear-gradient(0deg, black 20%, #ff428e 80%);
+    background: linear-gradient(0deg, light-dark(var(--light-bg-color), var(--dark-bg-color)) 20%, #ff428e 80%);
   }
   &::after{
     transition: transform 0.8s ease-out;
@@ -139,7 +155,7 @@ body {
   max-width: 70ch;
   font-size: 1.0em;
   align-self: center;
-  color: var(--color-godot-but-desaturated);
+  color: light-dark(var(--accent-color), var(--color-godot-but-desaturated));
   font-size: 1.2rem;
   .text p {
     text-align: justify;
@@ -156,8 +172,9 @@ body {
     content: "”";
   }
   a{
-    color: var(--color-godot-but-desaturated);
-    text-decoration: none;
+    color: light-dark(var(--accent-color), var(--color-godot-but-desaturated));
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
   }
   .text{
     margin-bottom: 1em;
@@ -185,7 +202,7 @@ body {
       text-decoration: none;
       font-weight: 400;
       opacity: 80%;
-      color: var(--main-text-color);
+      color: light-dark(var(--light-text-color), var(--dark-text-color));
       &:hover{
         opacity: 100%;
       }
@@ -219,10 +236,12 @@ body {
     }
     .by{
       margin-bottom: 1.4em;
+      font-weight: 500;
     }
     a{
-      color: var(--main-text-color);
-      font-weight: 600;
+      color: light-dark(var(--light-text-color), var(--dark-text-color));
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
     }
   }
 }
