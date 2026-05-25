@@ -333,7 +333,7 @@ authors_list: "0xcafeb33f,1|2frac,1|4d49,1|aaronfranke,5|aaronp64,4|AayushSarikh
         let cameraTarget = undefined;
 
         // Load and inject custom material on scene load.
-        banner.loadScene("/assets/three_banners/three_banner_4.7.glb").then((glb)=>{
+        banner.loadScene("{{ site.baseurl }}/assets/three_banners/three_banner_4.7.glb").then((glb)=>{
             glb.scene.traverse((child)=>{
                 if (child.name.includes("Lightray")){
                     child.material = blueLightRay;
