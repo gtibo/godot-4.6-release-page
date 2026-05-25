@@ -326,8 +326,33 @@ authors_list: "0xcafeb33f,1|2frac,1|4d49,1|aaronfranke,5|aaronp64,4|AayushSarikh
 
     <script type="module">
         import { ReleaseBanner } from "{{ site.baseurl }}/assets/js/releases/banner_update.js";
+        import { MakeLightrayMat } from "{{ site.baseurl }}/assets/js/releases/lightray_mat.js";
+
         let banner = new ReleaseBanner("#three-container", "#three-canvas");
-        banner.loadScene("/assets/three_banners/three_banner_4.7.glb");
+        let blueLightRay = MakeLightrayMat("#4bf6ff");
+        let cameraTarget = undefined;
+
+        // Load and inject custom material on scene load.
+        banner.loadScene("/assets/three_banners/three_banner_4.7.glb").then((glb)=>{
+            glb.scene.traverse((child)=>{
+                if (child.name.includes("Lightray")){
+                    child.material = blueLightRay;
+                }
+                if (child.name.includes("CameraTarget")){
+                    cameraTarget = child;
+                }
+            });
+        });
+
+        banner.process = function(_delta){
+            if (this.sceneCamera){
+                this.sceneCamera.position.x = (this.mouse.x - 0.5) * 3.0;
+                this.sceneCamera.position.y = -(this.mouse.y - 0.5) * 1.0;
+                this.sceneCamera.position.z = 4.0;
+                if (cameraTarget) this.sceneCamera.lookAt(cameraTarget.position);
+            }
+            blueLightRay.uniforms.uTime.value = window.performance.now();
+        }
 
     </script>
 </body>

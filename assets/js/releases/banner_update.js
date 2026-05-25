@@ -11,7 +11,13 @@ export class ReleaseBanner{
         this.renderer = new THREE.WebGLRenderer({antialias: true, canvas: this.canvas});
         this.renderer.outputColorSpace = THREE.LinearSRGBColorSpace;
         this.renderer.toneMapping = THREE.ReinhardToneMapping;
-        this.renderer.toneMappingExposure = 1.5;
+        this.renderer.toneMappingExposure = 1.6;
+
+        this.renderer.shadowMap.enabled = true
+        this.renderer.shadowMap.type = THREE.PCFShadowMap
+        this.renderer.shadowMap.alias = true
+        this.renderer.shadowMap.width=1024
+        this.renderer.shadowMap.height=1024
 
         this.timer = new THREE.Timer();
         this.timer.connect( document );
@@ -19,6 +25,8 @@ export class ReleaseBanner{
         this.sceneCamera = null;
 
         this.viewSize = {x: 0.0, y: 0.0};
+
+        this.mouse = {x: 0.0, y: 0.0};
 
         this.observer = new IntersectionObserver(this.IntersectionObserverCallback.bind(this), {
             rootMargin: "0px",
@@ -28,22 +36,38 @@ export class ReleaseBanner{
         this.observer.observe(this.container);
 
 
-        const ambientLight = new THREE.AmbientLight(0xFFFFFF, 1.6);
+        const ambientLight = new THREE.AmbientLight(0xFFFFFF, 2.0);
         this.scene.add(ambientLight);
 
+        // TODO: Move all light setup outside of base class
+
         const directionalLight = new THREE.DirectionalLight(0xFFFFFF, 8.5);
-        directionalLight.position.set(-0.5, 1, 1);
-        directionalLight.target.position.set(0.0, 0, 0);
+        directionalLight.position.set(0.9, 1.0, 1.0);
+        directionalLight.target.position.set(0.0, 0.0, 0.0);
+        directionalLight.castShadow = true;
+        directionalLight.shadow.mapSize.width = 1024;
+        directionalLight.shadow.mapSize.height = 1024;
+
+        directionalLight.shadow.intensity = 0.8;
+        directionalLight.shadow.camera.top = 10.0;
+        directionalLight.shadow.camera.bottom = -10.0;
+        directionalLight.shadow.camera.left = 6.0;
+        directionalLight.shadow.camera.right = -6.0;
+        directionalLight.shadow.camera.far =  10.0;
+        directionalLight.shadow.camera.near =  -5.0;
+        directionalLight.shadow.bias = 0.0001;
+
         this.scene.add(directionalLight);
         this.scene.add(directionalLight.target);
 
         const backLight = new THREE.DirectionalLight(0xb5e3ff, 4.0);
-        backLight.position.set(0.5, -0.5, -1);
+        backLight.position.set(-1.0, -1.0, -1.0);
         backLight.target.position.set(0.0, 0, 0);
         this.scene.add(backLight);
         this.scene.add(backLight.target);
 
-        window.addEventListener("resize", (_e)=>{ this.checkForResize() });
+        window.addEventListener("resize", (_e) => { this.checkForResize() });
+        window.addEventListener("pointermove", this.onPointerMove.bind(this));
     }
 
     checkForResize(){
@@ -75,6 +99,12 @@ export class ReleaseBanner{
         }
     }
 
+    onPointerMove(event) {
+        if (event.buttons != 0) return;
+        this.mouse.x = event.clientX / this.viewSize.x;
+        this.mouse.y = event.clientY / this.viewSize.y;
+    }
+
     IntersectionObserverCallback(entries, observer){
         entries.forEach((entry)=>{
             if(entry.target != this.container) return;
@@ -87,17 +117,23 @@ export class ReleaseBanner{
     }
 
     play(){
-        this.renderer.setAnimationLoop(this.update.bind(this));
+        this.renderer.setAnimationLoop(this.animate.bind(this));
     }
 
     stop(){
         this.renderer.setAnimationLoop(null);
     }
 
-    update(timestamp){
+    animate(timestamp){
         const delta = this.timer.getDelta();
         if ( this.sceneCamera ) this.renderer.render( this.scene, this.sceneCamera );
         if ( this.mixer ) this.mixer.update( delta );
+        this.process(delta);
+        this.timer.update(timestamp);
+    }
+
+    process(delta){
+
     }
 
     async loadScene(GLBScenePath){
@@ -106,6 +142,27 @@ export class ReleaseBanner{
         glb.scene.traverse((child) => {
             if (child instanceof THREE.Camera) {
                 this.sceneCamera = child;
+            }
+
+            // TODO: Move all of this logic outside of base class and clean it
+
+            if (child instanceof THREE.Mesh) {
+                
+                if (child.name.includes("Plush")){
+                    child.castShadow = true;
+                }
+                if (child.name.includes("ReceiveShadow")){
+                    child.receiveShadow = true;
+                }
+                if (child.name.includes("CastShadow")){
+                    child.castShadow = true;
+                }
+                if (child.name.includes("ShadowCastMesh")){
+                    child.castShadow = true;
+                }
+                if (child.name.includes("ShadowCastMesh")){
+                    child.castShadow = true;
+                }
             }
         });
 
@@ -117,5 +174,6 @@ export class ReleaseBanner{
         this.checkForResize();
         this.scene.add(glb.scene);
         this.container.classList.add("loaded");
+        return glb;
     }
 }
