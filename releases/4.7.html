@@ -327,19 +327,55 @@ authors_list: "0xcafeb33f,1|2frac,1|4d49,1|aaronfranke,5|aaronp64,4|AayushSarikh
     <script type="module">
         import { ReleaseBanner } from "{{ site.baseurl }}/assets/js/releases/banner_update.js";
         import { MakeLightrayMat } from "{{ site.baseurl }}/assets/js/releases/lightray_mat.js";
+        import * as THREE from "{{ site.baseurl }}/assets/js/modules/three.module.min.js";
 
         let banner = new ReleaseBanner("#three-container", "#three-canvas");
         let blueLightRay = MakeLightrayMat("#4bf6ff");
         let cameraTarget = undefined;
 
+        // Light setup
+    
+        const ambientLight = new THREE.AmbientLight(0xFFFFFF, 2.0);
+        banner.scene.add(ambientLight);
+
+        const directionalLight = new THREE.DirectionalLight(0xFFFFFF, 8.5);
+        directionalLight.position.set(0.9, 1.0, 1.0);
+        directionalLight.target.position.set(0.0, 0.0, 0.0);
+        directionalLight.castShadow = true;
+        directionalLight.shadow.mapSize.width = 1024;
+        directionalLight.shadow.mapSize.height = 1024;
+
+        directionalLight.shadow.intensity = 0.8;
+        directionalLight.shadow.camera.top = 10.0;
+        directionalLight.shadow.camera.bottom = -10.0;
+        directionalLight.shadow.camera.left = 6.0;
+        directionalLight.shadow.camera.right = -6.0;
+        directionalLight.shadow.camera.far =  10.0;
+        directionalLight.shadow.camera.near =  -5.0;
+        directionalLight.shadow.bias = 0.0001;
+
+        banner.scene.add(directionalLight);
+        banner.scene.add(directionalLight.target);
+
+        const backLight = new THREE.DirectionalLight(0xb5e3ff, 4.0);
+        backLight.position.set(-1.0, -1.0, -1.0);
+        backLight.target.position.set(0.0, 0, 0);
+        banner.scene.add(backLight);
+        banner.scene.add(backLight.target);
+
         // Load and inject custom material on scene load.
         banner.loadScene("{{ site.baseurl }}/assets/three_banners/three_banner_4.7.glb").then((glb)=>{
             glb.scene.traverse((child)=>{
-                if (child.name.includes("Lightray")){
+                if (child.name.toLowerCase().includes("lightray")){
                     child.material = blueLightRay;
                 }
-                if (child.name.includes("CameraTarget")){
+                if (child.name.toLowerCase().includes("cameratarget")){
                     cameraTarget = child;
+                }
+                if (child instanceof THREE.Mesh) {
+                    if (child.name.toLowerCase().includes("plush")) child.castShadow = true;
+                    if (child.name.toLowerCase().includes("receiveshadow")) child.receiveShadow = true;
+                    if (child.name.toLowerCase().includes("castshadow")) child.castShadow = true;
                 }
             });
         });

@@ -35,37 +35,6 @@ export class ReleaseBanner{
         });
         this.observer.observe(this.container);
 
-
-        const ambientLight = new THREE.AmbientLight(0xFFFFFF, 2.0);
-        this.scene.add(ambientLight);
-
-        // TODO: Move all light setup outside of base class
-
-        const directionalLight = new THREE.DirectionalLight(0xFFFFFF, 8.5);
-        directionalLight.position.set(0.9, 1.0, 1.0);
-        directionalLight.target.position.set(0.0, 0.0, 0.0);
-        directionalLight.castShadow = true;
-        directionalLight.shadow.mapSize.width = 1024;
-        directionalLight.shadow.mapSize.height = 1024;
-
-        directionalLight.shadow.intensity = 0.8;
-        directionalLight.shadow.camera.top = 10.0;
-        directionalLight.shadow.camera.bottom = -10.0;
-        directionalLight.shadow.camera.left = 6.0;
-        directionalLight.shadow.camera.right = -6.0;
-        directionalLight.shadow.camera.far =  10.0;
-        directionalLight.shadow.camera.near =  -5.0;
-        directionalLight.shadow.bias = 0.0001;
-
-        this.scene.add(directionalLight);
-        this.scene.add(directionalLight.target);
-
-        const backLight = new THREE.DirectionalLight(0xb5e3ff, 4.0);
-        backLight.position.set(-1.0, -1.0, -1.0);
-        backLight.target.position.set(0.0, 0, 0);
-        this.scene.add(backLight);
-        this.scene.add(backLight.target);
-
         window.addEventListener("resize", (_e) => { this.checkForResize() });
         window.addEventListener("pointermove", this.onPointerMove.bind(this));
     }
@@ -142,27 +111,6 @@ export class ReleaseBanner{
         glb.scene.traverse((child) => {
             if (child instanceof THREE.Camera) {
                 this.sceneCamera = child;
-            }
-
-            // TODO: Move all of this logic outside of base class and clean it
-
-            if (child instanceof THREE.Mesh) {
-                
-                if (child.name.includes("Plush")){
-                    child.castShadow = true;
-                }
-                if (child.name.includes("ReceiveShadow")){
-                    child.receiveShadow = true;
-                }
-                if (child.name.includes("CastShadow")){
-                    child.castShadow = true;
-                }
-                if (child.name.includes("ShadowCastMesh")){
-                    child.castShadow = true;
-                }
-                if (child.name.includes("ShadowCastMesh")){
-                    child.castShadow = true;
-                }
             }
         });
 
