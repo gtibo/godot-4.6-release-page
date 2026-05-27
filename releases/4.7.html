@@ -333,8 +333,10 @@ authors_list: "0xcafeb33f,1|2frac,1|4d49,1|aaronfranke,5|aaronp64,4|AayushSarikh
         let banner = new ReleaseBanner("#three-container", "#three-canvas");
         let blueLightRay = MakeLightrayMat("#4bf6ff");
         let cameraTarget = undefined;
+        let cameraAnchor = undefined;
         let bgMesh = undefined;
         let sceneRoot = undefined;
+        let scrollPercent = 0.0;
 
         // Light setup
     
@@ -350,10 +352,10 @@ authors_list: "0xcafeb33f,1|2frac,1|4d49,1|aaronfranke,5|aaronp64,4|AayushSarikh
 
         directionalLight.shadow.intensity = 0.8;
         directionalLight.shadow.camera.top = 20.0;
-        directionalLight.shadow.camera.bottom = -0.0;
+        directionalLight.shadow.camera.bottom = -10.0;
         directionalLight.shadow.camera.left = 15.0;
         directionalLight.shadow.camera.right = -15.0;
-        directionalLight.shadow.camera.far =  15.0;
+        directionalLight.shadow.camera.far =  20.0;
         directionalLight.shadow.camera.near =  0.0;
         directionalLight.shadow.normalBias = 0.01;
         directionalLight.shadow.bias = 0.01;
@@ -367,36 +369,56 @@ authors_list: "0xcafeb33f,1|2frac,1|4d49,1|aaronfranke,5|aaronp64,4|AayushSarikh
         banner.scene.add(backLight);
         banner.scene.add(backLight.target);
 
-
         function setBgColor() {
             if (!bgMesh) return;
+            /*
             bgMesh.material.color =
                 (banner.useDarkTheme ? 
                 new THREE.Color("hsl(200, 10.0%, 10.0%)") :
                 new THREE.Color("hsl(200, 100.0%, 95.0%)"));
+            */
             bgMesh.material.color = new THREE.Color("hsl(200, 10.0%, 10.0%)");
         }
 
         function updateComposition() {
-            let ratio = clamp(banner.viewSize.x / banner.viewSize.y, 1.0, 1.5);
+            let ratio = clamp(banner.viewSize.x / banner.viewSize.y, 1.0, 2.0);
+            let ratioX = mapRange(ratio, 1.0, 2.0, 0.0, 1.0);
 
-            let ratioX = mapRange(ratio, 1.0, 1.5, 0.0, 1.0);
+            banner.sceneCamera.position.z = mapRange(ratioX, 0.0, 1.0,  0.0, 2.0);
 
+            if (cameraAnchor) {
+                cameraAnchor.position.y = 2.0;
+            }
 
-            // banner.sceneCamera.position.z = 5.0 - 8.0 * (1.0 - ratioX);
+            if (cameraTarget) {
+                cameraTarget.position.x = 0.0;
+                cameraTarget.position.y = 1.0;
+                banner.sceneCamera.lookAt(cameraTarget.position)
+            }
 
             if (sceneRoot) {
                 sceneRoot.position.z = mapRange(ratioX, 0.0, 1.0, -12.0, -10.0);
-                sceneRoot.position.x = 6.0 * ratioX;
+                sceneRoot.position.x = mapRange(ratioX, 0.0, 1.0, 0.5, 5.0);
                 sceneRoot.position.y = mapRange(ratioX, 0.0, 1.0, -3.25, -2.);
-                sceneRoot.rotation.y = mapRange(ratioX, 0.0, 1.0, -Math.PI * 0.1, -Math.PI * 0.2);
-                sceneRoot.rotation.x = mapRange(ratioX, 0.0, 1.0, 0.0,  Math.PI * 0.05);
+                sceneRoot.rotation.y = mapRange(ratioX, 0.0, 1.0, -Math.PI * 0.1, -Math.PI * 0.18);
             }
+
+        }
+
+        banner.process = function(_delta){
+            if (this.sceneCamera){
+                this.sceneCamera.position.x = (this.mouse.x - 0.5) * 1.0;
+                this.sceneCamera.position.y = -(this.mouse.y - 0.5) * 1.0 - scrollPercent * 1.5;
+            }
+            blueLightRay.uniforms.uTime.value = window.performance.now();
         }
 
         // Load and inject custom material on scene load.
-        banner.loadScene("{{ site.baseurl }}/assets/three_banners/three_banner_4.7.glb").then((glb)=>{
-            glb.scene.traverse((child)=>{
+        banner.loadScene("{{ site.baseurl }}/assets/three_banners/three_banner_4.7.glb");
+
+
+        banner.events.addEventListener( "ready", () => {
+            banner.scene.traverse((child)=>{
                 if (child.name.toLowerCase().includes("lightray")){
                     child.material = blueLightRay;
                 }
@@ -410,28 +432,20 @@ authors_list: "0xcafeb33f,1|2frac,1|4d49,1|aaronfranke,5|aaronp64,4|AayushSarikh
                     if (child.name == "WorldSphereMesh") bgMesh = child;
                 }
                 if (child.name == "SceneHolder") sceneRoot = child;
+                if (child.name == "CameraAnchor") cameraAnchor = child;
             });
-
             // Set bg color
             setBgColor();
             updateComposition();
         });
 
-        banner.process = function(_delta){
-            if (this.sceneCamera){
-                // this.sceneCamera.position.x = (this.mouse.x - 0.5) * 3.0;
-                // this.sceneCamera.position.y = -(this.mouse.y - 0.5) * 1.0 ;
-                // if (cameraTarget) this.sceneCamera.lookAt(cameraTarget.position);
-            }
+        banner.events.addEventListener( "colorSchemeChanged", setBgColor);
+        banner.events.addEventListener("resized", updateComposition);
 
-            blueLightRay.uniforms.uTime.value = window.performance.now();
-        }
+        window.addEventListener("scroll", (event) => {
+            scrollPercent = window.scrollY / banner.viewSize.y;
+        });
 
-        banner.onColorSchemeChange = function() {
-            setBgColor(this.useDarkTheme);
-        }
-
-        banner.onResize = function(_width, _height) { updateComposition(); }
 
     </script>
 </body>

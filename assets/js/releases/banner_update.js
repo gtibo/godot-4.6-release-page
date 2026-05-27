@@ -35,15 +35,26 @@ export class ReleaseBanner{
         });
         this.observer.observe(this.container);
 
+        this.events = new THREE.EventDispatcher();
+
         window.addEventListener("resize", (_e) => { this.checkForResize() });
         window.addEventListener("pointermove", this.onPointerMove.bind(this));
 
         let themeMatch = window.matchMedia("(prefers-color-scheme: dark)");
         this.useDarkTheme = themeMatch.matches;
+    
         themeMatch.addEventListener("change", (event) => {
             this.useDarkTheme = event.matches;
-            this.onColorSchemeChange();
+            this.events.dispatchEvent({ type: "colorSchemeChanged" });
         });
+
+        this.loadingManager = THREE.DefaultLoadingManager;
+        this.loadingManager.onLoad = () => {
+            this.checkForResize();
+            this.container.classList.add("loaded");
+            this.events.dispatchEvent({ type: "ready" });
+        };
+
     }
 
     checkForResize(){
@@ -73,15 +84,7 @@ export class ReleaseBanner{
             this.sceneCamera.aspect = width / height;
             this.sceneCamera.updateProjectionMatrix();
         }
-        this.onResize(width, height);
-    }
-
-    onColorSchemeChange() {
-
-    }
-
-    onResize() {
-
+        this.events.dispatchEvent({ type: "resized" });
     }
 
     onPointerMove(event) {
@@ -121,23 +124,22 @@ export class ReleaseBanner{
 
     }
 
-    async loadScene(GLBScenePath){
+    loadScene(GLBScenePath){
         const loader = new GLTFLoader();
-        const glb = await loader.loadAsync(import.meta.resolve(GLBScenePath));
-        glb.scene.traverse((child) => {
-            if (child instanceof THREE.Camera) {
-                this.sceneCamera = child;
-            }
+        loader.load(import.meta.resolve(GLBScenePath), glb => {
+            this.scene.add(glb.scene);
+
+            glb.scene.traverse((child) => {
+                if (child instanceof THREE.Camera) {
+                    this.sceneCamera = child;
+                }
+            });
+    
+            this.mixer = new THREE.AnimationMixer( glb.scene );
+            const clip = THREE.AnimationClip.findByName( glb.animations, 'Scene' );
+            const action = this.mixer.clipAction( clip );
+            action.play();
+
         });
-
-        this.mixer = new THREE.AnimationMixer( glb.scene );
-        const clip = THREE.AnimationClip.findByName( glb.animations, 'Scene' );
-        const action = this.mixer.clipAction( clip );
-        action.play();
-
-        this.checkForResize();
-        this.scene.add(glb.scene);
-        this.container.classList.add("loaded");
-        return glb;
     }
 }
