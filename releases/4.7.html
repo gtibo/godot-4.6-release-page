@@ -384,7 +384,8 @@ authors_list: "0xcafeb33f,1|2frac,1|4d49,1|aaronfranke,5|aaronp64,4|AayushSarikh
             let ratio = clamp(banner.viewSize.x / banner.viewSize.y, 1.0, 2.0);
             let ratioX = mapRange(ratio, 1.0, 2.0, 0.0, 1.0);
 
-            banner.sceneCamera.position.z = mapRange(ratioX, 0.0, 1.0,  0.0, 2.0);
+            // banner.sceneCamera.position.z = mapRange(ratioX, 0.0, 1.0, 2.0, 2.0);
+            banner.sceneCamera.position.z = 2.0;
 
             if (cameraAnchor) {
                 cameraAnchor.position.y = 2.0;
@@ -399,7 +400,7 @@ authors_list: "0xcafeb33f,1|2frac,1|4d49,1|aaronfranke,5|aaronp64,4|AayushSarikh
             if (sceneRoot) {
                 sceneRoot.position.z = mapRange(ratioX, 0.0, 1.0, -12.0, -10.0);
                 sceneRoot.position.x = mapRange(ratioX, 0.0, 1.0, 0.5, 5.0);
-                sceneRoot.position.y = mapRange(ratioX, 0.0, 1.0, -3.25, -2.);
+                sceneRoot.position.y = mapRange(ratioX, 0.0, 1.0, -3.0, -2.);
                 sceneRoot.rotation.y = mapRange(ratioX, 0.0, 1.0, -Math.PI * 0.1, -Math.PI * 0.18);
             }
 

@@ -26,7 +26,7 @@ export class ReleaseBanner{
 
         this.viewSize = {x: 0.0, y: 0.0};
 
-        this.mouse = {x: 0.0, y: 0.0};
+        this.mouse = {x: 0.5, y: 0.5};
 
         this.observer = new IntersectionObserver(this.IntersectionObserverCallback.bind(this), {
             rootMargin: "0px",
